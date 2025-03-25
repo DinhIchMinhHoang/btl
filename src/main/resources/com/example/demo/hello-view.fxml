@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <Pane layoutX="41.0" layoutY="118.0" prefHeight="100.0" prefWidth="781.0" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutY="100.0" prefHeight="520.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label fx:id="VietnameseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="32.0" prefHeight="18.0" prefWidth="257.0" text="Vietnamese" textAlignment="CENTER" />
+         
+                                        <Label fx:id="EnglishLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="32.0" prefHeight="18.0" prefWidth="255.0" text="English" textAlignment="CENTER" />
+            <TextArea fx:id="TranslateTarget" layoutX="60.0" layoutY="60.0" prefHeight="377.0" prefWidth="272.0" promptText="Type..." />
+            <TextArea fx:id="TranslateExplain" layoutX="448.0" layoutY="60.0" prefHeight="377.0" prefWidth="272.0" promptText="Type..." />
+            <Button fx:id="TranslateButton" layoutX="354.0" layoutY="224.0" mnemonicParsing="false" onAction="#onTranslateButtonClick" prefHeight="39.0" prefWidth="73.0" text="Translate" textAlignment="CENTER" />
+            <Button fx:id="SwapButton" layoutX="368.0" layoutY="29.0" mnemonicParsing="false" onAction="#onSwapButtonClick" text="Swap" />
+         </children></Pane>
+   </children>
+</AnchorPane>
