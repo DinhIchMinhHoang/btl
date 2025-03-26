@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TranslateApplication extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TranslateApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("translate-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 780, 590);
         stage.setTitle("Translate application");
         stage.setScene(scene);
