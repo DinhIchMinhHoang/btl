@@ -5,8 +5,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
    <children>
-      <Button fx:id="TranslaterButton" layoutX="161.0" layoutY="26.0" mnemonicParsing="false" onAction="#onTranslaterButtonClick" text="Translater" />
-      <Button fx:id="HomeButton" layoutX="364.0" layoutY="26.0" mnemonicParsing="false" onAction="#onHomeButtonClick" text="Home" />
-      <Button fx:id="GameButton" layoutX="573.0" layoutY="26.0" mnemonicParsing="false" onAction="#onGameButtonClick" text="Game" />
+      <BorderPane prefHeight="590.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="TranslaterButton" mnemonicParsing="false" onAction="#onTranslaterButtonClick" prefHeight="50.0" prefWidth="100.0" text="Translater" />
+                  <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="50.0" prefWidth="100.0" text="Home" />
+                  <Button fx:id="GameButton" mnemonicParsing="false" onAction="#onGameButtonClick" prefHeight="50.0" prefWidth="100.0" text="Game" />
+               </children>
+            </VBox>
+         </left></BorderPane>
    </children>
 </AnchorPane>
