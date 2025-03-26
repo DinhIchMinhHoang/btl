@@ -10,9 +10,9 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("translate-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 780, 590);
-        stage.setTitle("Translate application");
+        stage.setTitle("Dictionary application");
         stage.setScene(scene);
         stage.show();
     }

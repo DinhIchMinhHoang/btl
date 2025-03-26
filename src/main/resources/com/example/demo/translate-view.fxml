@@ -5,7 +5,12 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TranslateController">
    <children>
-      <Pane layoutX="41.0" layoutY="118.0" prefHeight="100.0" prefWidth="781.0" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="41.0" layoutY="118.0" prefHeight="100.0" prefWidth="781.0" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="HomeButton" layoutX="364.0" layoutY="39.0" mnemonicParsing="false" onAction="#onHomeButtonClick" text="Home" />
+            <Button fx:id="TranslaterButton" layoutX="169.0" layoutY="39.0" mnemonicParsing="false" onAction="#onTranslaterButtonClick" text="Translater" />
+            <Button fx:id="GameButton" layoutX="560.0" layoutY="39.0" mnemonicParsing="false" onAction="#onGameButtonClick" text="Game" />
+         </children></Pane>
       <Pane layoutY="100.0" prefHeight="520.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <Label fx:id="VietnameseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="32.0" prefHeight="18.0" prefWidth="257.0" text="Vietnamese" textAlignment="CENTER" />

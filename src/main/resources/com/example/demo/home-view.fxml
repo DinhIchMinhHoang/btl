@@ -5,6 +5,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
    <children>
-      <Button fx:id="TranslaterButton" layoutX="364.0" layoutY="282.0" mnemonicParsing="false" onAction="#onTranslaterButtonClick" text="Translater" />
+      <Button fx:id="TranslaterButton" layoutX="161.0" layoutY="26.0" mnemonicParsing="false" onAction="#onTranslaterButtonClick" text="Translater" />
+      <Button fx:id="HomeButton" layoutX="364.0" layoutY="26.0" mnemonicParsing="false" onAction="#onHomeButtonClick" text="Home" />
+      <Button fx:id="GameButton" layoutX="573.0" layoutY="26.0" mnemonicParsing="false" onAction="#onGameButtonClick" text="Game" />
    </children>
 </AnchorPane>

@@ -1,15 +1,21 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class TranslateController {
     private String source = "en", target = "vi";
 
     @FXML
-    public Button TranslateButton, SwapButton;
+    public Button TranslateButton, SwapButton, HomeButton, TranslaterButton, GameButton;
 
     public TextArea TranslateTarget, TranslateExplain;
 
@@ -44,4 +50,29 @@ public class TranslateController {
         TranslateTarget.clear();
         TranslateExplain.clear();
     }
+
+    @FXML
+    protected void onHomeButtonClick() {
+        try {
+            Parent homeView = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            Stage stage = (Stage) HomeButton.getScene().getWindow();
+            stage.setScene(new Scene(homeView));
+            stage.setTitle("Dictionary Application");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error loading Dictionary Application: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    protected void onGameButtonClick() {
+
+    }
+
+
+    @FXML
+    protected void onTranslaterButtonClick() {
+
+    }
+
 }
