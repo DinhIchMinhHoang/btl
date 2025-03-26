@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
+   <children>
+      <Button fx:id="TranslaterButton" layoutX="364.0" layoutY="282.0" mnemonicParsing="false" onAction="#onTranslaterButtonClick" text="Translater" />
+   </children>
+</AnchorPane>
