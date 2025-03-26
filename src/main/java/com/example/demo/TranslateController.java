@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +16,9 @@ public class TranslateController {
     private String source = "en", target = "vi";
 
     @FXML
-    public Button TranslateButton, SwapButton, HomeButton, TranslaterButton, GameButton;
+    public Button TranslateButton, SwapButton;
+
+    public HBox TranslaterButton, HomeButton, GameButton;
 
     public TextArea TranslateTarget, TranslateExplain;
 

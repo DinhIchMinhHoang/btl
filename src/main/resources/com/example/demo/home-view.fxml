@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
    <children>
       <BorderPane prefHeight="590.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="50.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="TranslaterButton" mnemonicParsing="false" onAction="#onTranslaterButtonClick" prefHeight="50.0" prefWidth="100.0" text="Translater" />
-                  <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="50.0" prefWidth="100.0" text="Home" />
-                  <Button fx:id="GameButton" mnemonicParsing="false" onAction="#onGameButtonClick" prefHeight="50.0" prefWidth="100.0" text="Game" />
+                  <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/translate.png" />
+                           </image></ImageView>
+                        <Label prefHeight="26.0" prefWidth="76.0" text="Translate">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/home.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="26.0" prefWidth="76.0" text="Home">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/game.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="26.0" prefWidth="76.0" text="Game">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
+               <styleClass>
+                  <String fx:value="white-background" />
+                  <String fx:value="right-side-border" />
+               </styleClass>
             </VBox>
          </left></BorderPane>
    </children>
