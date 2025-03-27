@@ -16,9 +16,8 @@ public class TranslateController {
     private String source = "en", target = "vi";
 
     @FXML
-    public Button TranslateButton, SwapButton;
 
-    public HBox TranslaterButton, HomeButton, GameButton;
+    public HBox TranslaterButton, HomeButton, GameButton, SwapButton, TranslateButton;
 
     public TextArea TranslateTarget, TranslateExplain;
 

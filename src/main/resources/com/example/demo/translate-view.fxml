@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -21,7 +20,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="590.0" prefWidth="250.0" spacing="50.0" stylesheets="@../../../homeView.css">
                      <children>
-                        <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                        <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5; -fx-border-radius: 0;">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -41,11 +40,11 @@
                            <styleClass>
                               <String fx:value="word-selected" />
                               <String fx:value="word" />
-                              <String fx:value="selected" />
                               <String fx:value="selected-border" />
+                              <String fx:value="selected" />
                            </styleClass>
                         </HBox>
-                        <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                        <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected1" stylesheets="@../../../button.css">
                            <children>
                               <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -58,16 +57,8 @@
                                  </font>
                               </Label>
                            </children>
-                           <stylesheets>
-                              <URL value="@../../../words.css" />
-                              <URL value="@../../../button.css" />
-                           </stylesheets>
-                           <styleClass>
-                              <String fx:value="selected" />
-                              <String fx:value="word" />
-                           </styleClass>
                         </HBox>
-                        <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                        <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
                            <children>
                               <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -86,7 +77,7 @@
                            </stylesheets>
                            <styleClass>
                               <String fx:value="word" />
-                              <String fx:value="selected" />
+                              <String fx:value="selected2" />
                            </styleClass>
                         </HBox>
                      </children>
@@ -101,21 +92,45 @@
          <center>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="660.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextArea fx:id="TranslateTarget" layoutX="31.0" layoutY="144.0" prefHeight="400.0" prefWidth="282.0" promptText="Type..." style="-fx-background-radius: 20;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="155.0" />
-                  <TextArea fx:id="TranslateExplain" layoutX="476.0" layoutY="144.0" prefHeight="400.0" prefWidth="243.0" promptText="Type..." style="-fx-background-radius: 20;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="155.0" />
-                  <Button fx:id="SwapButton" layoutX="331.0" layoutY="89.0" mnemonicParsing="false" onAction="#onSwapButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10;" text="Swap" textAlignment="CENTER" AnchorPane.bottomAnchor="460.6" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="331.4" AnchorPane.topAnchor="89.0" />
-                  <Label fx:id="VietnameseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="484.0" layoutY="94.0" prefHeight="42.0" prefWidth="200.0" text="Vietnamese" textAlignment="CENTER" AnchorPane.bottomAnchor="465.2" AnchorPane.leftAnchor="484.0" AnchorPane.rightAnchor="65.60000000000002" AnchorPane.topAnchor="94.0">
-                     <font>
-                        <Font name="Arial" size="36.0" />
-                     </font>
-                  </Label>
-      
-                                              <Label fx:id="EnglishLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="93.0" prefHeight="42.0" prefWidth="256.0" text="English" textAlignment="CENTER" AnchorPane.bottomAnchor="465.4" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="457.59999999999997" AnchorPane.topAnchor="93.0">
-                     <font>
-                        <Font name="Arial" size="36.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="TranslateButton" layoutX="331.0" layoutY="335.0" mnemonicParsing="false" onAction="#onTranslateButtonClick" prefHeight="40.0" prefWidth="87.0" style="-fx-background-radius: 10;" text="Translate" textAlignment="CENTER" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="331.20000000000005" AnchorPane.rightAnchor="331.40000000000003" AnchorPane.topAnchor="335.0" />
+                  <TextArea fx:id="TranslateTarget" layoutX="31.0" layoutY="144.0" prefHeight="400.0" prefWidth="282.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="155.0" />
+                  <TextArea fx:id="TranslateExplain" layoutX="476.0" layoutY="144.0" prefHeight="400.0" prefWidth="243.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="155.0" />
+                  <HBox fx:id="SwapButton" alignment="CENTER" depthTest="ENABLE" layoutX="349.0" layoutY="89.0" onMouseClicked="#onSwapButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="selected" stylesheets="@../../../button.css" AnchorPane.bottomAnchor="460.8" AnchorPane.leftAnchor="348.80000000000007" AnchorPane.rightAnchor="350.20000000000005" AnchorPane.topAnchor="89.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/swap.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="TranslateButton" accessibleRole="BUTTON" alignment="CENTER" layoutX="330.0" layoutY="335.0" onMouseClicked="#onTranslateButtonClick" prefHeight="40.0" prefWidth="87.0" style="-fx-background-radius: 30; -fx-border-color: #000; -fx-border-radius: 30;" styleClass="selected" stylesheets="@../../../button.css">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="35.0" layoutY="84.0" prefHeight="60.0" prefWidth="260.0" style="-fx-background-radius: 30; -fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 30;">
+                     <children>
+            
+                                                          <Label fx:id="EnglishLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="256.0" text="English" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="455.0" layoutY="84.0" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: #fff; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #000;">
+                     <children>
+                        <Label fx:id="VietnameseLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="200.0" text="Vietnamese" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </AnchorPane>
          </center>

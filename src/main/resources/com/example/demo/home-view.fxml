@@ -17,7 +17,7 @@
          <left>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="50.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                  <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -33,11 +33,11 @@
                         <URL value="@../../../button.css" />
                      </stylesheets>
                      <styleClass>
-                        <String fx:value="word" />
+                        <String fx:value="selected0" />
                         <String fx:value="selected" />
                      </styleClass>
                   </HBox>
-                  <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                  <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
                      <children>
                         <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,13 +55,11 @@
                         <URL value="@../../../button.css" />
                      </stylesheets>
                      <styleClass>
-                        <String fx:value="word" />
-                        <String fx:value="selected" />
-                        <String fx:value="selected-border" />
-                        <String fx:value="word-selected" />
+                        <String fx:value="selected1" />
+                        <String fx:value="selected1-border" />
                      </styleClass>
                   </HBox>
-                  <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0">
+                  <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
                      <children>
                         <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -80,7 +78,7 @@
                      </stylesheets>
                      <styleClass>
                         <String fx:value="word" />
-                        <String fx:value="selected" />
+                        <String fx:value="selected2" />
                      </styleClass>
                   </HBox>
                </children>

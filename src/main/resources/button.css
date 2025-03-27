@@ -1,11 +1,52 @@
 .selected-border{
-    -fx-border-color: #000000;
+    -fx-border-color: #0013fd;
     -fx-border-width: 0 3 0 0;
     -fx-background-color: #d8d8d8;
 }
 .selected:hover{
     -fx-background-color: #e1e1e1;
 }
-.selected-border:pressed{
+.selected:pressed{
+    -fx-background-color: #b8b8b8;
+}
+.selected-border:hover{
+    -fx-border-color: #0013fd;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #e1e1e1;
+}
+
+.selected1:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #fd0000;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #fd0000;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #08fd00;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #08fd00;
+    -fx-border-width: 0 3 0 0;
+}
+.selected0:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #0013fd;
+    -fx-border-width: 0 3 0 0;
+}
+.selected0:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #0013fd;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1-border{
+    -fx-border-color: #fd0000;
+    -fx-border-width: 0 3 0 0;
     -fx-background-color: #d8d8d8;
 }
