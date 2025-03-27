@@ -17,7 +17,7 @@ public class TranslateController {
 
     @FXML
 
-    public HBox TranslaterButton, HomeButton, GameButton, SwapButton, TranslateButton;
+    public HBox TranslaterButton, HomeButton, GameButton, SwapButton, TranslateButton, SearchButton;
 
     public TextArea TranslateTarget, TranslateExplain;
 
@@ -69,11 +69,36 @@ public class TranslateController {
     @FXML
     protected void onGameButtonClick() {
 
+        try {
+            Parent translateView = FXMLLoader.load(getClass().getResource("game-view.fxml"));
+            Stage stage = (Stage) GameButton.getScene().getWindow();
+            stage.setScene(new Scene(translateView));
+            stage.setTitle("Hangman Game");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error loading Translate view: " + e.getMessage());
+        }
+
     }
 
 
     @FXML
     protected void onTranslaterButtonClick() {
+
+    }
+
+    @FXML
+    protected void onSearchButtonClick() {
+
+        try {
+            Parent translateView = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            Stage stage = (Stage) SearchButton.getScene().getWindow();
+            stage.setScene(new Scene(translateView));
+            stage.setTitle("Search");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error loading Translate view: " + e.getMessage());
+        }
 
     }
 

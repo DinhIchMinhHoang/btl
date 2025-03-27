@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HangManGameController {
+public class SearchController {
 
     @FXML
     public HBox TranslaterButton, HomeButton, GameButton, SearchButton;
@@ -43,17 +43,11 @@ public class HangManGameController {
     @FXML
     protected void onGameButtonClick() {
 
-
-    }
-
-    @FXML
-    protected void onSearchButtonClick() {
-
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("search-view.fxml"));
-            Stage stage = (Stage) SearchButton.getScene().getWindow();
+            Parent translateView = FXMLLoader.load(getClass().getResource("game-view.fxml"));
+            Stage stage = (Stage) GameButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
-            stage.setTitle("Search");
+            stage.setTitle("Hangman Game");
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Error loading Translate view: " + e.getMessage());
@@ -61,4 +55,10 @@ public class HangManGameController {
 
     }
 
+    @FXML
+    protected void onSearchButtonClick() {
+
+
+    }
 }
+

@@ -11,13 +11,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeViewController">
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HangManGameController">
    <children>
-      <BorderPane prefHeight="590.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
+                  <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected1">
                      <children>
                         <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -26,7 +27,7 @@
                         </ImageView>
                         <Label prefHeight="26.0" prefWidth="76.0" text="Home">
                            <font>
-                              <Font name="System Bold" size="16.0" />
+                              <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
@@ -34,10 +35,6 @@
                         <URL value="@../../../words.css" />
                         <URL value="@../../../button.css" />
                      </stylesheets>
-                     <styleClass>
-                        <String fx:value="selected1" />
-                        <String fx:value="selected1-border" />
-                     </styleClass>
                   </HBox>
                   <HBox fx:id="SearchButton" alignment="CENTER" layoutX="10.0" layoutY="290.0" onMouseClicked="#onSearchButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected3">
                      <children>
@@ -62,11 +59,13 @@
                         <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../img/translate.png" />
-                           </image></ImageView>
+                           </image>
+                        </ImageView>
                         <Label prefHeight="26.0" prefWidth="76.0" text="Translate">
                            <font>
                               <Font size="16.0" />
-                           </font></Label>
+                           </font>
+                        </Label>
                      </children>
                      <stylesheets>
                         <URL value="@../../../words.css" />
@@ -86,7 +85,7 @@
                         </ImageView>
                         <Label prefHeight="26.0" prefWidth="76.0" text="Game">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                      </children>
@@ -97,6 +96,7 @@
                      <styleClass>
                         <String fx:value="word" />
                         <String fx:value="selected2" />
+                        <String fx:value="selected2-border" />
                      </styleClass>
                   </HBox>
                </children>
@@ -106,21 +106,6 @@
                </styleClass>
             </VBox>
          </left>
-         <center>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="304.0" fitWidth="376.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../img/book.png" />
-                     </image>
-                  </ImageView>
-                  <Label text="DICTIONARY">
-                     <font>
-                        <Font name="System Bold" size="72.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
-         </center></BorderPane>
+      </BorderPane>
    </children>
 </AnchorPane>

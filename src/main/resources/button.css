@@ -50,3 +50,33 @@
     -fx-border-width: 0 3 0 0;
     -fx-background-color: #d8d8d8;
 }
+.selected3:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #a000fd;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #a000fd;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3-border{
+    -fx-border-color: #a000fd;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected3-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #a000fd;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2-border{
+    -fx-border-color: #08fd00;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected2-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #08fd00;
+    -fx-border-width: 0 3 0 0;
+}

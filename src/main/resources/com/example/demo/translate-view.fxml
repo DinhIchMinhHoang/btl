@@ -18,8 +18,40 @@
          <left>
             <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="250.0" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="590.0" prefWidth="250.0" spacing="50.0" stylesheets="@../../../homeView.css">
+                  <VBox alignment="CENTER" prefHeight="590.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css">
                      <children>
+                        <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected1" stylesheets="@../../../button.css">
+                           <children>
+                              <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/home.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="26.0" prefWidth="76.0" text="Home">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="SearchButton" alignment="CENTER" onMouseClicked="#onSearchButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected3">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/search.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="26.0" prefWidth="76.0" text="Search">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <stylesheets>
+                              <URL value="@../../../words.css" />
+                              <URL value="@../../../button.css" />
+                           </stylesheets>
+                        </HBox>
                         <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5; -fx-border-radius: 0;">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -43,20 +75,6 @@
                               <String fx:value="selected-border" />
                               <String fx:value="selected" />
                            </styleClass>
-                        </HBox>
-                        <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected1" stylesheets="@../../../button.css">
-                           <children>
-                              <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../img/home.png" />
-                                 </image>
-                              </ImageView>
-                              <Label prefHeight="26.0" prefWidth="76.0" text="Home">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
                         </HBox>
                         <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
                            <children>
