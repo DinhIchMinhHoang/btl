@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -18,86 +18,60 @@
          <left>
             <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="250.0" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="590.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css">
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css">
                      <children>
-                        <HBox fx:id="HomeButton" alignment="CENTER" layoutX="10.0" layoutY="365.0" onMouseClicked="#onHomeButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected1" stylesheets="@../../../button.css">
-                           <children>
-                              <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                        <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="RED" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/home.png" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="26.0" prefWidth="76.0" text="Home">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox fx:id="SearchButton" alignment="CENTER" onMouseClicked="#onSearchButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;" styleClass="selected3">
-                           <children>
-                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#a000fd" styleClass="selected3" stylesheets="@../../../button.css" text="Search">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/search.png" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="26.0" prefWidth="76.0" text="Search">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <stylesheets>
-                              <URL value="@../../../words.css" />
-                              <URL value="@../../../button.css" />
-                           </stylesheets>
-                        </HBox>
-                        <HBox fx:id="TranslaterButton" alignment="CENTER" onMouseClicked="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5; -fx-border-radius: 0;">
-                           <children>
-                              <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#0013fd" stylesheets="@../../../button.css" text="Translate">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/translate.png" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="26.0" prefWidth="76.0" text="Translate">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <stylesheets>
-                              <URL value="@../../../words.css" />
-                              <URL value="@../../../button.css" />
-                           </stylesheets>
+                           </graphic>
                            <styleClass>
-                              <String fx:value="word-selected" />
-                              <String fx:value="word" />
+                              <String fx:value="selected0" />
                               <String fx:value="selected-border" />
-                              <String fx:value="selected" />
                            </styleClass>
-                        </HBox>
-                        <HBox fx:id="GameButton" alignment="CENTER" layoutX="10.0" layoutY="345.0" onMouseClicked="#onGameButtonClick" prefHeight="40.0" prefWidth="120.0" spacing="20.0" style="-fx-background-radius: 5;">
-                           <children>
-                              <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                        </JFXButton>
+                        <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#08fd00" styleClass="selected2" stylesheets="@../../../button.css" text="Game">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/game.png" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="26.0" prefWidth="76.0" text="Game">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <stylesheets>
-                              <URL value="@../../../words.css" />
-                              <URL value="@../../../button.css" />
-                           </stylesheets>
-                           <styleClass>
-                              <String fx:value="word" />
-                              <String fx:value="selected2" />
-                           </styleClass>
-                        </HBox>
+                           </graphic>
+                        </JFXButton>
                      </children>
                      <styleClass>
                         <String fx:value="white-background" />
@@ -110,26 +84,14 @@
          <center>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="660.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextArea fx:id="TranslateTarget" layoutX="31.0" layoutY="144.0" prefHeight="400.0" prefWidth="282.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="155.0" />
-                  <TextArea fx:id="TranslateExplain" layoutX="476.0" layoutY="144.0" prefHeight="400.0" prefWidth="243.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="155.0" />
-                  <HBox fx:id="SwapButton" alignment="CENTER" depthTest="ENABLE" layoutX="349.0" layoutY="89.0" onMouseClicked="#onSwapButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="selected" stylesheets="@../../../button.css" AnchorPane.bottomAnchor="460.8" AnchorPane.leftAnchor="348.80000000000007" AnchorPane.rightAnchor="350.20000000000005" AnchorPane.topAnchor="89.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../img/swap.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="TranslateButton" accessibleRole="BUTTON" alignment="CENTER" layoutX="330.0" layoutY="335.0" onMouseClicked="#onTranslateButtonClick" prefHeight="40.0" prefWidth="87.0" style="-fx-background-radius: 30; -fx-border-color: #000; -fx-border-radius: 30;" styleClass="selected" stylesheets="@../../../button.css">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../img/arrow.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
+                  <TextArea fx:id="TranslateTarget" layoutX="31.0" layoutY="144.0" prefHeight="400.0" prefWidth="282.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="155.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextArea>
+                  <TextArea fx:id="TranslateExplain" layoutX="476.0" layoutY="144.0" prefHeight="400.0" prefWidth="243.0" promptText="Type..." style="-fx-background-radius: 10; -fx-border-color: #000; -fx-border-radius: 10;" styleClass="transparent" stylesheets="@../../../backGround.css" wrapText="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="155.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextArea>
                   <HBox alignment="CENTER" layoutX="35.0" layoutY="84.0" prefHeight="60.0" prefWidth="260.0" style="-fx-background-radius: 30; -fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 30;">
                      <children>
             
@@ -149,6 +111,29 @@
                         </Label>
                      </children>
                   </HBox>
+                  <JFXButton fx:id="SwapButton" buttonType="RAISED" layoutX="349.0" layoutY="90.0" onAction="#onSwapButtonClick" prefHeight="48.0" prefWidth="50.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #000;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/swap.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="0.01" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="TranslateButton" buttonType="RAISED" layoutX="331.0" layoutY="334.0" onAction="#onTranslateButtonClick" prefHeight="40.0" prefWidth="87.0" style="-fx-border-color: #000; -fx-background-radius: 30; -fx-border-radius: 30;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
+                     <font>
+                        <Font size="0.01" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
                </children>
             </AnchorPane>
          </center>

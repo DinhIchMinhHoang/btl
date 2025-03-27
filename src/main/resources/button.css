@@ -22,7 +22,7 @@
 }
 .selected1:pressed{
     -fx-background-color: #b8b8b8;
-    -fx-border-color: #fd0000;
+    -fx-border-color: #ff0a0a;
     -fx-border-width: 0 3 0 0;
 }
 .selected2:hover{

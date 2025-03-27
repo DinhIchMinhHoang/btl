@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +13,7 @@ import java.io.IOException;
 public class HangManGameController {
 
     @FXML
-    public HBox TranslaterButton, HomeButton, GameButton, SearchButton;
+    public JFXButton TranslaterButton, HomeButton, GameButton, SearchButton;
 
     @FXML
     protected void onTranslaterButtonClick() {
