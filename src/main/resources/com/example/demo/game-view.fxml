@@ -13,7 +13,7 @@
    <children>
       <BorderPane prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#fd0000" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
                      <font>

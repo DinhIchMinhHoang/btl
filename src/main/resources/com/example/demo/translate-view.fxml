@@ -18,7 +18,7 @@
          <left>
             <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="250.0" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css">
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" stylesheets="@../../../homeView.css">
                      <children>
                         <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="RED" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
                            <font>

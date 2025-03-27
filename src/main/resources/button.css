@@ -1,82 +1,110 @@
-.selected-border{
-    -fx-border-color: #0013fd;
-    -fx-border-width: 0 3 0 0;
-    -fx-background-color: #d8d8d8;
-}
+
 .selected:hover{
     -fx-background-color: #e1e1e1;
 }
 .selected:pressed{
     -fx-background-color: #b8b8b8;
 }
-.selected-border:hover{
-    -fx-border-color: #0013fd;
-    -fx-border-width: 0 3 0 0;
-    -fx-background-color: #e1e1e1;
+.selected{
+    -fx-cursor: hand;
 }
 
-.selected1:hover{
-    -fx-background-color: #e1e1e1;
-    -fx-border-color: #fd0000;
-    -fx-border-width: 0 3 0 0;
-}
-.selected1:pressed{
-    -fx-background-color: #b8b8b8;
-    -fx-border-color: #ff0a0a;
-    -fx-border-width: 0 3 0 0;
-}
-.selected2:hover{
-    -fx-background-color: #e1e1e1;
-    -fx-border-color: #08fd00;
-    -fx-border-width: 0 3 0 0;
-}
-.selected2:pressed{
-    -fx-background-color: #b8b8b8;
-    -fx-border-color: #08fd00;
-    -fx-border-width: 0 3 0 0;
-}
+
 .selected0:hover{
     -fx-background-color: #e1e1e1;
-    -fx-border-color: #0013fd;
+    -fx-border-color: #1976D2;
     -fx-border-width: 0 3 0 0;
 }
 .selected0:pressed{
     -fx-background-color: #b8b8b8;
-    -fx-border-color: #0013fd;
+    -fx-border-color: #1976D2;
     -fx-border-width: 0 3 0 0;
 }
-.selected1-border{
-    -fx-border-color: #fd0000;
+.selected-border:hover{
+    -fx-border-color: #1976D2;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #e1e1e1;
+}
+.selected-border{
+    -fx-border-color: #1976D2;
     -fx-border-width: 0 3 0 0;
     -fx-background-color: #d8d8d8;
 }
-.selected3:hover{
+.selected0{
+    -fx-cursor: hand;
+}
+
+
+.selected2:hover{
     -fx-background-color: #e1e1e1;
-    -fx-border-color: #a000fd;
+    -fx-border-color: #4CAF50;
     -fx-border-width: 0 3 0 0;
 }
-.selected3:pressed{
+.selected2:pressed{
     -fx-background-color: #b8b8b8;
-    -fx-border-color: #a000fd;
-    -fx-border-width: 0 3 0 0;
-}
-.selected3-border{
-    -fx-border-color: #a000fd;
-    -fx-border-width: 0 3 0 0;
-    -fx-background-color: #d8d8d8;
-}
-.selected3-border:hover{
-    -fx-background-color: #e1e1e1;
-    -fx-border-color: #a000fd;
+    -fx-border-color: #4CAF50;
     -fx-border-width: 0 3 0 0;
 }
 .selected2-border{
-    -fx-border-color: #08fd00;
+    -fx-border-color: #4CAF50;
     -fx-border-width: 0 3 0 0;
     -fx-background-color: #d8d8d8;
 }
 .selected2-border:hover{
     -fx-background-color: #e1e1e1;
-    -fx-border-color: #08fd00;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2{
+    -fx-cursor: hand;
+}
+
+
+.selected3:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3-border{
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected3-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3{
+    -fx-cursor: hand;
+}
+
+
+.selected1-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1-border{
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected1{
+    -fx-cursor: hand;
+}
+.selected1:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #E53935 ;
     -fx-border-width: 0 3 0 0;
 }

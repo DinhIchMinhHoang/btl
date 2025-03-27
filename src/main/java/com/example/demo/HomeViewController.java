@@ -31,15 +31,7 @@ public class HomeViewController {
 
     @FXML
     protected void onHomeButtonClick() {
-        try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-            Stage stage = (Stage) HomeButton.getScene().getWindow();
-            stage.setScene(new Scene(translateView));
-            stage.setTitle("Dictionary Application");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Error loading Translate view: " + e.getMessage());
-        }
+
     }
 
     @FXML

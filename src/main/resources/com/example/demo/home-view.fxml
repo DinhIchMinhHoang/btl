@@ -30,9 +30,9 @@
             </VBox>
          </center>
          <left>
-            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="40.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" stylesheets="@../../../homeView.css" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#fd0000" stylesheets="@../../../button.css" text="Home">
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#fd0000" stylesheets="@../../../button.css" text="Home">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
