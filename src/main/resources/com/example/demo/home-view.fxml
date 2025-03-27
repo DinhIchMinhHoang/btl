@@ -87,6 +87,22 @@
                   <String fx:value="right-side-border" />
                </styleClass>
             </VBox>
-         </left></BorderPane>
+         </left>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="304.0" fitWidth="376.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/book.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="DICTIONARY">
+                     <font>
+                        <Font name="System Bold" size="72.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center></BorderPane>
    </children>
 </AnchorPane>
