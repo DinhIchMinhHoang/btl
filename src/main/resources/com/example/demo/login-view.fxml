@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginController">
+   <children>
+      <JFXTextArea layoutX="75.0" layoutY="403.0" prefHeight="10.0" prefWidth="250.0" />
+      <JFXTextArea layoutX="75.0" layoutY="334.0" prefHeight="10.0" prefWidth="250.0" />
+   </children>
+</AnchorPane>
