@@ -1,3 +1,12 @@
 .transparent{
     -fx-background-color: rgba(0,0,0,0);
 }
+.mixcolor{
+    -fx-background-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+.radius{
+    -fx-background-radius: 0 30 30 0;
+}
+.radius1{
+    -fx-background-radius: 30 0 0 30;
+}

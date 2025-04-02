@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignUpController">
+   <children>
+      <Pane layoutX="661.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../backGround.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="mixcolor" />
+            <String fx:value="radius1" />
+         </styleClass>
+         <children>
+            <JFXButton fx:id="SwitchLoginButton" layoutX="150.0" layoutY="430.0" onAction="#onSwitchLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../button.css" text="Login">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXTextArea fx:id="Username" layoutX="80.0" layoutY="100.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextArea>
+      <JFXTextArea fx:id="Password" layoutX="80.0" layoutY="200.0" prefHeight="10.0" prefWidth="300.0" promptText="Password" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextArea>
+      <JFXTextArea fx:id="ConfirmPassword" layoutX="80.0" layoutY="300.0" prefHeight="10.0" prefWidth="300.0" promptText="Confirm password" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextArea>
+      <JFXButton fx:id="RegisteButton" layoutX="130.0" layoutY="430.0" onAction="#onResgisterButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Register">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="selected" />
+            <String fx:value="mixborder" />
+         </styleClass>
+      </JFXButton>
+      <Label fx:id="WarningText" alignment="CENTER" contentDisplay="CENTER" layoutX="43.0" layoutY="390.0" prefHeight="20.0" prefWidth="374.0" textFill="RED" />
+   </children>
+</AnchorPane>

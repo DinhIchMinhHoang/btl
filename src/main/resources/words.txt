@@ -1,9 +1,0 @@
-scientist
-dog
-cat
-bat
-sit
-bit
-hit
-project
-computer
