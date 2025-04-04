@@ -3,17 +3,56 @@ package com.example.demo;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HangManGameController {
+public class HangManGameController implements Initializable {
 
     @FXML
     public JFXButton TranslaterButton, HomeButton, GameButton, SearchButton;
+
+    public JFXButton CloseButton, MinimizeButton;
+
+    public HBox headBar;
+
+    private double xOffset = 0, yOffset = 0;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        headBar.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
+        });
+
+        headBar.setOnMouseDragged(event -> {
+            Stage stage = (Stage) headBar.getScene().getWindow();
+            stage.setX(event.getScreenX() - xOffset);
+            stage.setY(event.getScreenY() - yOffset);
+        });
+    }
+
+    @FXML
+    protected void onMinimizeButtonClick(){
+
+        Stage stage = (Stage) MinimizeButton.getScene().getWindow();
+        stage.setIconified(true);
+
+    }
+
+    @FXML
+    protected void onCloseButtonClick(){
+
+        Stage stage = (Stage) CloseButton.getScene().getWindow();
+        stage.close();
+
+    }
 
     @FXML
     protected void onTranslaterButtonClick() {

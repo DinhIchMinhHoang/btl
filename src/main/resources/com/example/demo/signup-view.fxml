@@ -4,6 +4,8 @@
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
@@ -24,6 +26,21 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
+            <ImageView fitHeight="188.0" fitWidth="200.0" layoutX="156.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/book.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="140.0" layoutY="216.0" text="DICTIONARY">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="180.0" layoutY="274.0" text="JOIN US">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <JFXTextArea fx:id="Username" layoutX="80.0" layoutY="100.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;">

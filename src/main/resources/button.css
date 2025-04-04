@@ -110,3 +110,7 @@
 .mixborder{
     -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
 }
+
+.close:hover{
+    -fx-background-color: #D60A17;
+}

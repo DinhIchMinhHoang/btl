@@ -18,7 +18,7 @@
          <left>
             <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="250.0" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" stylesheets="@../../../homeView.css">
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../homeView.css">
                      <children>
                         <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="RED" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
                            <font>
@@ -137,6 +137,36 @@
                </children>
             </AnchorPane>
          </center>
+         <top>
+            <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" styleClass="mixcolor" stylesheets="@../../../backGround.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </top>
       </BorderPane>
    </children>
 </AnchorPane>
