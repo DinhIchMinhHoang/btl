@@ -63,9 +63,12 @@ public class LoginController {
 
     @FXML
     protected void onLoginButtonClick() {
+        String username = UserName.getText().trim();
+        String password = Password.getText().trim();
 
-        String username = UserName.getText();
-        String password = Password.getText();
+        System.out.println("Attempting login with:");
+        System.out.println("Username: '" + username + "'");
+        System.out.println("Password: '" + password + "'");
 
         if (userManager.verifyUser(username, password)) {
             try {
@@ -81,6 +84,7 @@ public class LoginController {
             Wrong.setText("Invalid Username or Password");
         }
     }
+
 
 }
 

@@ -4,6 +4,8 @@ module com.example.demo {
     requires com.jfoenix;
     requires java.desktop;
     requires javafx.base;
-    opens com.example.demo to javafx.fxml;
+
+    opens com.example.demo to javafx.fxml, com.jfoenix;
+
     exports com.example.demo;
 }
