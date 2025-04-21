@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
@@ -18,7 +19,9 @@ public class LoginController {
     @FXML
     public JFXButton LoginButton, SignUpButton;
 
-    public JFXTextArea UserName, Password;
+    public JFXTextField UserName;
+
+    public JFXPasswordField Password;
 
     public Label Wrong;
 

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
-<?import java.lang.String?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginController">
    <children>
-      <JFXTextArea fx:id="Password" accessibleRole="PASSWORD_FIELD" labelFloat="true" layoutX="626.0" layoutY="374.0" prefHeight="10.0" prefWidth="300.0" promptText="Password" wrapText="true">
+      <JFXPasswordField fx:id="Password" labelFloat="true" layoutX="626.0" layoutY="374.0" prefHeight="10.0" prefWidth="300.0" promptText="Password">
          <font>
             <Font size="16.0" />
          </font>
@@ -38,8 +33,9 @@
          </focusColor>
          <cursor>
             <Cursor fx:constant="TEXT" />
-         </cursor></JFXTextArea>
-      <JFXTextArea fx:id="UserName" accessibleRole="TEXT_FIELD" cache="true" labelFloat="true" layoutX="626.0" layoutY="300.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;" wrapText="true">
+         </cursor>
+      </JFXPasswordField>
+      <JFXTextField fx:id="UserName" labelFloat="true" layoutX="626.0" layoutY="300.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;">
          <font>
             <Font size="16.0" />
          </font>
@@ -61,7 +57,9 @@
          </focusColor>
          <cursor>
             <Cursor fx:constant="TEXT" />
-         </cursor></JFXTextArea>
+         </cursor>
+      </JFXTextField>
+      <!-- Rest of the code remains the same -->
       <Pane prefHeight="600.0" prefWidth="500.0" stylesheets="@../../../backGround.css">
          <children>
             <JFXButton fx:id="SignUpButton" layoutX="150.0" layoutY="430.0" onAction="#onSignUpButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../button.css" text="Sign up">

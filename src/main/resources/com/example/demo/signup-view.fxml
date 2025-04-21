@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
-<?import java.lang.String?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignUpController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignUpController">
    <children>
       <Pane layoutX="661.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../backGround.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <styleClass>
@@ -43,7 +38,7 @@
             </Label>
          </children>
       </Pane>
-      <JFXTextArea fx:id="Username" layoutX="80.0" layoutY="100.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;">
+      <JFXTextArea fx:id="Username" labelFloat="true" layoutX="80.0" layoutY="100.0" prefHeight="10.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 20;">
          <font>
             <Font size="16.0" />
          </font>
@@ -64,7 +59,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextArea>
-      <JFXTextArea fx:id="Password" layoutX="80.0" layoutY="200.0" prefHeight="10.0" prefWidth="300.0" promptText="Password" style="-fx-background-radius: 20;">
+      <JFXTextArea fx:id="Password" labelFloat="true" layoutX="80.0" layoutY="200.0" prefHeight="10.0" prefWidth="300.0" promptText="Password" style="-fx-background-radius: 20;">
          <font>
             <Font size="16.0" />
          </font>
@@ -85,7 +80,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextArea>
-      <JFXTextArea fx:id="ConfirmPassword" layoutX="80.0" layoutY="300.0" prefHeight="10.0" prefWidth="300.0" promptText="Confirm password" style="-fx-background-radius: 20;">
+      <JFXTextArea fx:id="ConfirmPassword" labelFloat="true" layoutX="80.0" layoutY="300.0" prefHeight="10.0" prefWidth="300.0" promptText="Confirm password" style="-fx-background-radius: 20;">
          <font>
             <Font size="16.0" />
          </font>
