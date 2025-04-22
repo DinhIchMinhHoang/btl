@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -18,11 +19,16 @@
          <left>
             <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="250.0" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="10.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../homeView.css">
+                  <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="20.0" style="-fx-background-radius: 20;">
                      <children>
-                        <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="RED" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
+                        <ImageView fitHeight="180.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/book.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
@@ -32,7 +38,7 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#a000fd" styleClass="selected3" stylesheets="@../../../button.css" text="Search">
+                        <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../button.css" text="Search">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -44,9 +50,9 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#0013fd" stylesheets="@../../../button.css" text="Translate">
+                        <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Translate">
                            <font>
-                              <Font name="System Bold" size="16.0" />
+                              <Font size="16.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
@@ -60,7 +66,7 @@
                               <String fx:value="selected-border" />
                            </styleClass>
                         </JFXButton>
-                        <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="294.6" ripplerFill="#08fd00" styleClass="selected2" stylesheets="@../../../button.css" text="Game">
+                        <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected2" stylesheets="@../../../button.css" text="Game">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -77,6 +83,10 @@
                         <String fx:value="white-background" />
                         <String fx:value="right-side-border" />
                      </styleClass>
+                     <stylesheets>
+                        <URL value="@../../../backGround.css" />
+                        <URL value="@../../../homeView.css" />
+                     </stylesheets>
                   </VBox>
                </children>
             </VBox>
@@ -138,7 +148,7 @@
             </AnchorPane>
          </center>
          <top>
-            <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" styleClass="mixcolor" stylesheets="@../../../backGround.css" BorderPane.alignment="CENTER">
+            <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
                      <font>
@@ -165,6 +175,14 @@
                      </graphic>
                   </JFXButton>
                </children>
+               <stylesheets>
+                  <URL value="@../../../backGround.css" />
+                  <URL value="@../../../homeView.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="mixcolor" />
+                  <String fx:value="bottom-radius" />
+               </styleClass>
             </HBox>
          </top>
       </BorderPane>
