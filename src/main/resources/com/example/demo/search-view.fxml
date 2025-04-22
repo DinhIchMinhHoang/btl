@@ -62,7 +62,7 @@
                   </ImageView>
                   <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
@@ -74,7 +74,7 @@
                   </JFXButton>
                   <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Search">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="System Bold" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
