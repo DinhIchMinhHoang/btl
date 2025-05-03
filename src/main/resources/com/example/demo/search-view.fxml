@@ -134,12 +134,12 @@
                         <Font size="16.0" />
                      </font>
                   </TextField>
-                  <JFXButton onAction="#searchEvent" buttonType="RAISED" text="Search" styleClass="selected3">
+                  <JFXButton buttonType="RAISED" onAction="#searchEvent" styleClass="selected" stylesheets="@../../../button.css" text="Search">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton onAction="#speechEvent" buttonType="RAISED" text="Speak" styleClass="selected0">
+                  <JFXButton buttonType="RAISED" onAction="#speechEvent" styleClass="selected" stylesheets="@../../../button.css" text="Speak">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -147,33 +147,33 @@
                </HBox>
 
                <HBox alignment="CENTER" spacing="10">
-                  <JFXButton onAction="#addEvent" buttonType="RAISED" text="Add Word" styleClass="selected1">
+                  <JFXButton buttonType="RAISED" onAction="#addEvent" styleClass="selected" stylesheets="@../../../button.css" text="Add Word">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton onAction="#deleteEvent" buttonType="RAISED" text="Delete Word" styleClass="selected2">
+                  <JFXButton buttonType="RAISED" onAction="#deleteEvent" styleClass="selected" stylesheets="@../../../button.css" text="Delete Word">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton onAction="#changeEvent" buttonType="RAISED" text="Edit Word" styleClass="selected3">
+                  <JFXButton buttonType="RAISED" onAction="#changeEvent" styleClass="selected" stylesheets="@../../../button.css" text="Edit Word">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton onAction="#saveEvent" buttonType="RAISED" text="Save Changes" styleClass="selected0">
+                  <JFXButton buttonType="RAISED" onAction="#saveEvent" styleClass="selected" stylesheets="@../../../button.css" text="Save Changes">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
                </HBox>
 
-               <HBox VBox.vgrow="ALWAYS" spacing="10">
-                  <ListView fx:id="listView" prefWidth="300" onMouseClicked="#clickEvent" />
-                  <TextArea fx:id="textArea" HBox.hgrow="ALWAYS" wrapText="true">
+               <HBox spacing="10" VBox.vgrow="ALWAYS">
+                  <ListView fx:id="listView" onMouseClicked="#clickEvent" prefWidth="300" />
+                  <TextArea fx:id="textArea" wrapText="true" HBox.hgrow="ALWAYS">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="16.0" />
                      </font>
                   </TextArea>
                </HBox>

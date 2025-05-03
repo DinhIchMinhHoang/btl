@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
-    private static final String UserFile = "src/main/resources/user.txt";
+    private static final String UserFile = "resources/user.txt";
 
-    // Constructor to ensure file exists when UserManager is created
     public UserManager() {
         createFileIfNotExists();
     }
@@ -63,7 +62,7 @@ public class UserManager {
     }
 
     public boolean addUser(User user) {
-        createFileIfNotExists(); // Ensure file exists before writing
+        createFileIfNotExists();
 
         List<User> existingUsers = getAllUsers();
         for (User existingUser : existingUsers) {

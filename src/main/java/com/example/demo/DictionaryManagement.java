@@ -345,7 +345,6 @@ public class DictionaryManagement {
      * @return chuỗi sau khi dịch.
      */
     public static String translate(String langFrom, String langTo, String text) throws IOException {
-        // INSERT YOU URL HERE
         String urlStr = null;
         try {
             urlStr = "https://script.google.com/macros/s/AKfycbzqt4HkQoDO-iwvT0jDJxrs0TlIshoa3SklBCZGnizNcAVXGA/exec" +

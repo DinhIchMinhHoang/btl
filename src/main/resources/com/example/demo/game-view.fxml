@@ -9,7 +9,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HangManGameController">
    <children>
@@ -123,6 +126,176 @@
                </stylesheets>
             </VBox>
          </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="398.0" prefWidth="750.0">
+                     <children>
+                        <Line endX="530.5" endY="64.73552703857422" layoutX="-84.0" layoutY="-11.0" startX="528.9999389648438" startY="288.20001220703125" strokeWidth="5.0" />
+                        <Line endX="523.800048828125" endY="247.73553466796875" layoutX="-224.0" layoutY="33.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0" />
+                        <Line endX="666.800048828125" endY="291.23553466796875" layoutX="-263.0" layoutY="-13.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0" />
+                        <Line endX="576.800048828125" endY="247.73553466796875" layoutX="-225.0" layoutY="-194.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0" />
+                        <Line endX="645.300048828125" endY="195.73553466796875" layoutX="-296.0" layoutY="-142.0" startX="645.300048828125" startY="229.60000610351562" strokeWidth="5.0" />
+                        <Circle fx:id="head" fill="WHITE" layoutX="348.0" layoutY="112.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Line fx:id="body" endX="694.0" endY="290.20001220703125" layoutX="-346.0" layoutY="-82.0" startX="694.0" startY="216.0" strokeWidth="5.0" />
+                        <Line fx:id="rightArm" endX="683.2000732421875" endY="278.0" layoutX="-360.0" layoutY="-109.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0" />
+                        <Line fx:id="leftArm" endX="721.4644775390625" endY="271.72894287109375" layoutX="-350.0" layoutY="-99.0" startX="698.0" startY="245.26446533203125" strokeWidth="5.0" />
+                        <Line fx:id="leftLeg" endX="722.5999755859375" endY="255.20001220703125" layoutX="-349.0" layoutY="-27.0" startX="697.0" startY="237.70001220703125" strokeWidth="5.0" />
+                        <Line fx:id="rightLeg" endX="666.0" endY="253.20001220703125" layoutX="-343.0" layoutY="-25.0" startX="688.5" startY="235.70001220703125" strokeWidth="5.0" />
+                        <JFXButton fx:id="restartButton" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" styleClass="selected" stylesheets="@../../../button.css" text="RESTART">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Text fx:id="wordDisplay" layoutX="165.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold'" textAlignment="CENTER" wrappingWidth="423.9999694824219" />
+                        <Text fx:id="messageDisplay" layoutX="175.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" textAlignment="CENTER" wrappingWidth="400.0" />
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnQ" styleClass="selected" stylesheets="@../../../button.css" text="Q">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnW" styleClass="selected" stylesheets="@../../../button.css" text="W">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnE" styleClass="selected" stylesheets="@../../../button.css" text="E">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnR" styleClass="selected" stylesheets="@../../../button.css" text="R">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnT" styleClass="selected" stylesheets="@../../../button.css" text="T">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnY" styleClass="selected" stylesheets="@../../../button.css" text="Y">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnU" styleClass="selected" stylesheets="@../../../button.css" text="U">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnI" styleClass="selected" stylesheets="@../../../button.css" text="I">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnO" styleClass="selected" stylesheets="@../../../button.css" text="O">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnP" styleClass="selected" stylesheets="@../../../button.css" text="P">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="3.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnA" styleClass="selected" stylesheets="@../../../button.css" text="A">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnS" styleClass="selected" stylesheets="@../../../button.css" text="S">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnD" styleClass="selected" stylesheets="@../../../button.css" text="D">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnF" styleClass="selected" stylesheets="@../../../button.css" text="F">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnG" styleClass="selected" stylesheets="@../../../button.css" text="G">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnH" styleClass="selected" stylesheets="@../../../button.css" text="H">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnJ" styleClass="selected" stylesheets="@../../../button.css" text="J">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnK" styleClass="selected" stylesheets="@../../../button.css" text="K">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnL" styleClass="selected" stylesheets="@../../../button.css" text="L">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="13.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnZ" styleClass="selected" stylesheets="@../../../button.css" text="Z">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnX" styleClass="selected" stylesheets="@../../../button.css" text="X">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnC" styleClass="selected" stylesheets="@../../../button.css" text="C">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnV" styleClass="selected" stylesheets="@../../../button.css" text="V">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnB" styleClass="selected" stylesheets="@../../../button.css" text="B">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnN" styleClass="selected" stylesheets="@../../../button.css" text="N">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnM" styleClass="selected" stylesheets="@../../../button.css" text="M">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>
