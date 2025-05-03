@@ -147,7 +147,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </JFXButton>
-                        <Text fx:id="wordDisplay" layoutX="165.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold'" textAlignment="CENTER" wrappingWidth="423.9999694824219" />
+                        <Text fx:id="wordDisplay" layoutX="38.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold';" textAlignment="CENTER" wrappingWidth="678.3999328613281" />
                         <Text fx:id="messageDisplay" layoutX="175.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" textAlignment="CENTER" wrappingWidth="400.0" />
                      </children>
                   </AnchorPane>

@@ -143,7 +143,7 @@ public class HangManGameController implements Initializable {
             displayText.append(currentWord.charAt(i)).append(" ");
         }
         wordDisplay.setText(displayText.toString().trim());
-        wordDisplay.setStyle("-fx-font-size: 40px; -fx-font-family: monospace; -fx-letter-spacing: 10px;");
+        wordDisplay.setStyle("-fx-font-size: 40px; -fx-font-family: monospace; -fx-letter-spacing: 1px;");
 
         if (game.isGameOver()) {
             if (game.isWon()) {

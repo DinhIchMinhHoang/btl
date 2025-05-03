@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserManager {
-    private static final String UserFile = "resources/user.txt";
+    private static final String UserFile = "demo/src/main/resources/user.txt";
 
     public UserManager() {
         createFileIfNotExists();

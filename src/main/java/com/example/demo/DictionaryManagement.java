@@ -312,26 +312,18 @@ public class DictionaryManagement {
      * @throws IOException để đẩy ngoại lệ ra ngoài.
      */
     public void dictionarySave() throws IOException {
-        // Get the project's root directory
-        String userDir = System.getProperty("user.dir");
-        String resourcePath = userDir + "/dtb.txt";
+        String resourcePath = "demo/src/main/resources/dtb.txt";
 
-        FileWriter fileWriter = null;
-        try {
-            fileWriter = new FileWriter(resourcePath);
+        try (FileWriter fileWriter = new FileWriter(resourcePath)) {
             for (int i = 0; i < dictionary.getLists().length; i++) {
                 for (int j = 0; j < dictionary.getLists()[i].size(); j++) {
-                    String str = ((Word) dictionary.getLists()[i].get(j)).toString();
+                    String str = dictionary.getLists()[i].get(j).toString();
                     fileWriter.write("@" + str + "\n");
                 }
             }
         } catch (IOException exc) {
             System.err.println("Error saving dictionary: " + exc.getMessage());
             throw exc;
-        } finally {
-            if (fileWriter != null) {
-                fileWriter.close();
-            }
         }
     }
 
