@@ -4,6 +4,7 @@ import com.example.demo.common.TransitionController;
 import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -52,13 +53,24 @@ public class HangManGameController extends TransitionController {
         bodyParts.add(rightLeg);
         bodyParts.forEach(part -> {
             part.setOpacity(0);
-            fadeInTransition(part);
+            fadeStickmanPart(part);
         });
 
         initializeGame();
         slideInTransition(wordDisplay, false);
         slideInTransition(messageDisplay, true);
         animateLetterButtons();
+    }
+
+    private void fadeStickmanPart(Node node) {
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(500), node);
+        fadeTransition.setFromValue(0.0);
+        fadeTransition.setToValue(1.0);
+        fadeTransition.setCycleCount(2);
+        fadeTransition.setAutoReverse(true);
+
+        node.setOpacity(0.0);
+        fadeTransition.play();
     }
 
     private void animateLetterButtons() {
@@ -72,7 +84,6 @@ public class HangManGameController extends TransitionController {
             fadeIn.play();
         });
     }
-
 
     private void initializeGame() {
         letterButtons = new HashMap<>();
