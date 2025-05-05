@@ -39,7 +39,7 @@
                         <Image url="@../../../img/book.png" />
                      </image>
                   </ImageView>
-                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Home">
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Home">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -55,7 +55,7 @@
                         <String fx:value="selected1-border" />
                      </styleClass>
                   </JFXButton>
-                  <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../button.css" text="Search">
+                  <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../animation/button.css" text="Search">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -67,7 +67,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected0" stylesheets="@../../../button.css" text="Translate">
+                  <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected0" stylesheets="@../../../animation/button.css" text="Translate">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -79,7 +79,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected2" stylesheets="@../../../button.css" text="Game">
+                  <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected2" stylesheets="@../../../animation/button.css" text="Game">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -97,15 +97,15 @@
                   <String fx:value="right-side-border" />
                </styleClass>
                <stylesheets>
-                  <URL value="@../../../backGround.css" />
-                  <URL value="@../../../homeView.css" />
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
                </stylesheets>
             </VBox>
          </left>
          <top>
             <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" BorderPane.alignment="CENTER_RIGHT">
                <children>
-                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
+                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../animation/button.css" text=" ">
                      <font>
                         <Font size="0.001" />
                      </font>
@@ -117,7 +117,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../button.css" text=" ">
+                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../animation/button.css" text=" ">
                      <font>
                         <Font size="0.001" />
                      </font>
@@ -131,8 +131,8 @@
                   </JFXButton>
                </children>
                <stylesheets>
-                  <URL value="@../../../backGround.css" />
-                  <URL value="@../../../homeView.css" />
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
                </stylesheets>
                <styleClass>
                   <String fx:value="mixcolor" />

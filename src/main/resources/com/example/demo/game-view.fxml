@@ -20,7 +20,7 @@
          <top>
             <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../button.css" text=" ">
+                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../animation/button.css" text=" ">
                      <font>
                         <Font size="0.001" />
                      </font>
@@ -32,7 +32,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../button.css" text=" ">
+                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../animation/button.css" text=" ">
                      <font>
                         <Font size="0.001" />
                      </font>
@@ -46,8 +46,8 @@
                   </JFXButton>
                </children>
                <stylesheets>
-                  <URL value="@../../../backGround.css" />
-                  <URL value="@../../../homeView.css" />
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
                </stylesheets>
                <styleClass>
                   <String fx:value="mixcolor" />
@@ -63,7 +63,7 @@
                         <Image url="@../../../img/book.png" />
                      </image>
                   </ImageView>
-                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected1" stylesheets="@../../../button.css" text="Home">
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected1" stylesheets="@../../../animation/button.css" text="Home">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -75,7 +75,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../button.css" text="Search">
+                  <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../animation/button.css" text="Search">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -87,7 +87,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected0" stylesheets="@../../../button.css" text="Translate">
+                  <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected0" stylesheets="@../../../animation/button.css" text="Translate">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -99,7 +99,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Game">
+                  <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Game">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -121,8 +121,8 @@
                   <String fx:value="right-side-border" />
                </styleClass>
                <stylesheets>
-                  <URL value="@../../../backGround.css" />
-                  <URL value="@../../../homeView.css" />
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
                </stylesheets>
             </VBox>
          </left>
@@ -142,7 +142,7 @@
                         <Line fx:id="leftArm" endX="721.4644775390625" endY="271.72894287109375" layoutX="-350.0" layoutY="-99.0" startX="698.0" startY="245.26446533203125" strokeWidth="5.0" />
                         <Line fx:id="leftLeg" endX="722.5999755859375" endY="255.20001220703125" layoutX="-349.0" layoutY="-27.0" startX="697.0" startY="237.70001220703125" strokeWidth="5.0" />
                         <Line fx:id="rightLeg" endX="666.0" endY="253.20001220703125" layoutX="-343.0" layoutY="-25.0" startX="688.5" startY="235.70001220703125" strokeWidth="5.0" />
-                        <JFXButton fx:id="restartButton" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" styleClass="selected" stylesheets="@../../../button.css" text="RESTART">
+                        <JFXButton fx:id="restartButton" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" styleClass="selected" stylesheets="@../../../animation/button.css" text="RESTART">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -153,52 +153,52 @@
                   </AnchorPane>
                   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="750.0">
                      <children>
-                        <JFXButton fx:id="btnQ" styleClass="selected" stylesheets="@../../../button.css" text="Q">
+                        <JFXButton fx:id="btnQ" styleClass="selected" stylesheets="@../../../animation/button.css" text="Q">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnW" styleClass="selected" stylesheets="@../../../button.css" text="W">
+                        <JFXButton fx:id="btnW" styleClass="selected" stylesheets="@../../../animation/button.css" text="W">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnE" styleClass="selected" stylesheets="@../../../button.css" text="E">
+                        <JFXButton fx:id="btnE" styleClass="selected" stylesheets="@../../../animation/button.css" text="E">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnR" styleClass="selected" stylesheets="@../../../button.css" text="R">
+                        <JFXButton fx:id="btnR" styleClass="selected" stylesheets="@../../../animation/button.css" text="R">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnT" styleClass="selected" stylesheets="@../../../button.css" text="T">
+                        <JFXButton fx:id="btnT" styleClass="selected" stylesheets="@../../../animation/button.css" text="T">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnY" styleClass="selected" stylesheets="@../../../button.css" text="Y">
+                        <JFXButton fx:id="btnY" styleClass="selected" stylesheets="@../../../animation/button.css" text="Y">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnU" styleClass="selected" stylesheets="@../../../button.css" text="U">
+                        <JFXButton fx:id="btnU" styleClass="selected" stylesheets="@../../../animation/button.css" text="U">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnI" styleClass="selected" stylesheets="@../../../button.css" text="I">
+                        <JFXButton fx:id="btnI" styleClass="selected" stylesheets="@../../../animation/button.css" text="I">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnO" styleClass="selected" stylesheets="@../../../button.css" text="O">
+                        <JFXButton fx:id="btnO" styleClass="selected" stylesheets="@../../../animation/button.css" text="O">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnP" styleClass="selected" stylesheets="@../../../button.css" text="P">
+                        <JFXButton fx:id="btnP" styleClass="selected" stylesheets="@../../../animation/button.css" text="P">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -207,47 +207,47 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="3.0" prefWidth="750.0">
                      <children>
-                        <JFXButton fx:id="btnA" styleClass="selected" stylesheets="@../../../button.css" text="A">
+                        <JFXButton fx:id="btnA" styleClass="selected" stylesheets="@../../../animation/button.css" text="A">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnS" styleClass="selected" stylesheets="@../../../button.css" text="S">
+                        <JFXButton fx:id="btnS" styleClass="selected" stylesheets="@../../../animation/button.css" text="S">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnD" styleClass="selected" stylesheets="@../../../button.css" text="D">
+                        <JFXButton fx:id="btnD" styleClass="selected" stylesheets="@../../../animation/button.css" text="D">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnF" styleClass="selected" stylesheets="@../../../button.css" text="F">
+                        <JFXButton fx:id="btnF" styleClass="selected" stylesheets="@../../../animation/button.css" text="F">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnG" styleClass="selected" stylesheets="@../../../button.css" text="G">
+                        <JFXButton fx:id="btnG" styleClass="selected" stylesheets="@../../../animation/button.css" text="G">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnH" styleClass="selected" stylesheets="@../../../button.css" text="H">
+                        <JFXButton fx:id="btnH" styleClass="selected" stylesheets="@../../../animation/button.css" text="H">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnJ" styleClass="selected" stylesheets="@../../../button.css" text="J">
+                        <JFXButton fx:id="btnJ" styleClass="selected" stylesheets="@../../../animation/button.css" text="J">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnK" styleClass="selected" stylesheets="@../../../button.css" text="K">
+                        <JFXButton fx:id="btnK" styleClass="selected" stylesheets="@../../../animation/button.css" text="K">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnL" styleClass="selected" stylesheets="@../../../button.css" text="L">
+                        <JFXButton fx:id="btnL" styleClass="selected" stylesheets="@../../../animation/button.css" text="L">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -256,37 +256,37 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="13.0" prefWidth="750.0">
                      <children>
-                        <JFXButton fx:id="btnZ" styleClass="selected" stylesheets="@../../../button.css" text="Z">
+                        <JFXButton fx:id="btnZ" styleClass="selected" stylesheets="@../../../animation/button.css" text="Z">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnX" styleClass="selected" stylesheets="@../../../button.css" text="X">
+                        <JFXButton fx:id="btnX" styleClass="selected" stylesheets="@../../../animation/button.css" text="X">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnC" styleClass="selected" stylesheets="@../../../button.css" text="C">
+                        <JFXButton fx:id="btnC" styleClass="selected" stylesheets="@../../../animation/button.css" text="C">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnV" styleClass="selected" stylesheets="@../../../button.css" text="V">
+                        <JFXButton fx:id="btnV" styleClass="selected" stylesheets="@../../../animation/button.css" text="V">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnB" styleClass="selected" stylesheets="@../../../button.css" text="B">
+                        <JFXButton fx:id="btnB" styleClass="selected" stylesheets="@../../../animation/button.css" text="B">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnN" styleClass="selected" stylesheets="@../../../button.css" text="N">
+                        <JFXButton fx:id="btnN" styleClass="selected" stylesheets="@../../../animation/button.css" text="N">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="btnM" styleClass="selected" stylesheets="@../../../button.css" text="M">
+                        <JFXButton fx:id="btnM" styleClass="selected" stylesheets="@../../../animation/button.css" text="M">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>

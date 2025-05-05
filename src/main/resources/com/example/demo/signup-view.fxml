@@ -10,13 +10,13 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignUpController">
    <children>
-      <Pane layoutX="661.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../backGround.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="661.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../animation/backGround.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <styleClass>
             <String fx:value="mixcolor" />
             <String fx:value="radius1" />
          </styleClass>
          <children>
-            <JFXButton fx:id="SwitchLoginButton" layoutX="150.0" layoutY="430.0" onAction="#onSwitchLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../button.css" text="Login">
+            <JFXButton fx:id="SwitchLoginButton" layoutX="150.0" layoutY="430.0" onAction="#onSwitchLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../animation/button.css" text="Login">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -101,7 +101,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextArea>
-      <JFXButton fx:id="RegisteButton" layoutX="130.0" layoutY="430.0" onAction="#onResgisterButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../button.css" text="Register">
+      <JFXButton fx:id="RegisteButton" layoutX="130.0" layoutY="430.0" onAction="#onResgisterButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Register">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
