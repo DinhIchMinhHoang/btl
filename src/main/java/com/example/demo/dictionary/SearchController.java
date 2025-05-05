@@ -1,44 +1,27 @@
 package com.example.demo.dictionary;
 
-import com.jfoenix.controls.JFXButton;
+import com.example.demo.common.BaseController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 import javafx.util.Pair;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class SearchController implements Initializable {
+public class SearchController extends BaseController {
     private DictionaryManagement dictionaryManagement;
     private ObservableList list = FXCollections.observableArrayList();
 
     @FXML private TextField textField;
     @FXML private TextArea textArea;
     @FXML private ListView<String> listView;
-    @FXML private JFXButton MinimizeButton;
-    @FXML private JFXButton CloseButton;
-    @FXML private JFXButton HomeButton;
-    @FXML private JFXButton SearchButton;
-    @FXML private JFXButton TranslaterButton;
-    @FXML private JFXButton GameButton;
-    @FXML private HBox headBar;
-
-    private double xOffset = 0;
-    private double yOffset = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -49,64 +32,12 @@ public class SearchController implements Initializable {
             e.printStackTrace();
         }
 
-        // Enable window dragging
-        headBar.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
-        });
-
-        headBar.setOnMouseDragged(event -> {
-            Stage stage = (Stage) headBar.getScene().getWindow();
-            stage.setX(event.getScreenX() - xOffset);
-            stage.setY(event.getScreenY() - yOffset);
-        });
-
-        // Add text change listener for suggestions
         textField.textProperty().addListener((observable, oldValue, newValue) -> suggestEvent());
     }
 
     @FXML
-    protected void onMinimizeButtonClick() {
-        Stage stage = (Stage) MinimizeButton.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
-    @FXML
-    protected void onCloseButtonClick() {
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
-    }
-
-    @FXML
-    protected void onHomeButtonClick() {
-        navigateToView("/com/example/demo/home-view.fxml", "Dictionary Application");
-    }
-
-    @FXML
     protected void onSearchButtonClick() {
-        // Current view, no need to navigate
-    }
 
-    @FXML
-    protected void onTranslaterButtonClick() {
-        navigateToView("/com/example/demo/translate-view.fxml", "Translate");
-    }
-
-    @FXML
-    protected void onGameButtonClick() {
-        navigateToView("/com/example/demo/game-view.fxml", "Game");
-    }
-
-    private void navigateToView(String fxmlFile, String title) {
-        try {
-            Parent view = FXMLLoader.load(getClass().getResource(fxmlFile));
-            Stage stage = (Stage) HomeButton.getScene().getWindow();
-            stage.setScene(new Scene(view));
-            stage.setTitle(title);
-        } catch (IOException e) {
-            e.printStackTrace();
-            showError("Navigation Error", "Could not load " + title + " view");
-        }
     }
 
     @FXML

@@ -1,102 +1,85 @@
 package com.example.demo.game;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
-public class HangmanGame {
-    private String word;
-    private char[] guessedLetters;
-    private List<Character> incorrectGuesses;
-    private int remainingTries;
-    private boolean gameOver;
-    private static final int MAX_TRIES = 6;
-
+public class HangmanGame extends AbstracGame {
     public HangmanGame() {
-        this.incorrectGuesses = new ArrayList<>();
-        this.remainingTries = MAX_TRIES;
-        this.gameOver = false;
-        selectRandomWord();
+        initializeGame();
+        selectRandomWord("demo/src/main/resources/data/gameWords.txt"); // Correct file path
+
     }
 
-    private void selectRandomWord() {
-        try {
-            List<String> words = Files.readAllLines(Paths.get("demo/src/main/resources/data/gameWords.txt"));
-            word = words.get(new Random().nextInt(words.size())).trim().toUpperCase();
-            guessedLetters = new char[word.length()];
-            Arrays.fill(guessedLetters, '_');
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void start() {
+        System.out.println("Hangman Game started!");
     }
 
-    public boolean makeGuess(char letter) {
-        if (gameOver) {
-            return false;
-        }
-
-        letter = Character.toUpperCase(letter);
-        boolean correctGuess = false;
-
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == letter) {
-                guessedLetters[i] = letter;
-                correctGuess = true;
-            }
-        }
-
-        if (!correctGuess) {
-            if (!incorrectGuesses.contains(letter)) {
-                incorrectGuesses.add(letter);
-                remainingTries--;
-            }
-        }
-
-        checkGameStatus();
-        return correctGuess;
-    }
-
-    private void checkGameStatus() {
-        if (remainingTries <= 0) {
-            gameOver = true;
-        } else if (!String.valueOf(guessedLetters).contains("_")) {
-            gameOver = true;
-        }
-    }
-
+    @Override
     public void reset() {
         incorrectGuesses.clear();
-        remainingTries = MAX_TRIES;
+        remainingGuesses = MAX_TRIES;
         gameOver = false;
-        selectRandomWord();
+        selectRandomWord("demo/src/main/resources/data/gameWords.txt");
     }
 
-    public String getCurrentWord() {
-        return String.valueOf(guessedLetters);
-    }
-
-    public String getActualWord() {
-        return word;
-    }
-
-    public List<Character> getIncorrectGuesses() {
-        return incorrectGuesses;
-    }
-
-    public int getRemainingTries() {
-        return remainingTries;
-    }
-
+    @Override
     public boolean isGameOver() {
         return gameOver;
     }
 
+    @Override
+    public String getInstructions() {
+        return "Guess the word by suggesting letters";
+    }
+
+    @Override
+    public void updateDisplay() {
+        System.out.println("Updating Hangman display...");
+    }
+
+    @Override
+    public boolean makeGuess(char letter) {
+        if (gameOver) {
+            return false;
+        }
+        letter = Character.toUpperCase(letter);
+        boolean correctGuess = false;
+        for (int i = 0; i < wordToGuess.length(); i++) {
+            if (wordToGuess.charAt(i) == letter) {
+                guessedLetters[i] = letter;
+                correctGuess = true;
+            }
+        }
+        if (!correctGuess) {
+            if (!incorrectGuesses.contains(letter)) {
+                incorrectGuesses.add(letter);
+                remainingGuesses--;
+            }
+        }
+        checkGameStatus();
+        return correctGuess;
+    }
+    @Override
+    public String getCurrentWord() {
+        return String.valueOf(guessedLetters);
+    }
+
+    @Override
+    public String getActualWord() {
+        return wordToGuess;
+    }
+
+    @Override
+    public List<Character> getIncorrectGuesses() {
+        return incorrectGuesses;
+    }
+
+    @Override
+    public int getRemainingTries() {
+        return remainingGuesses;
+    }
+
+    @Override
     public boolean isWon() {
         return gameOver && !String.valueOf(guessedLetters).contains("_");
     }
-
 }

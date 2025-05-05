@@ -3,6 +3,7 @@ package com.example.demo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -15,6 +16,8 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
         stage.setTitle("Dictionary application");
         stage.initStyle(StageStyle.UNDECORATED);
+        Image icon = new Image(getClass().getResourceAsStream("/img/book.png"));
+        stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
     }

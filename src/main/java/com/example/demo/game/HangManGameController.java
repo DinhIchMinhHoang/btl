@@ -1,30 +1,19 @@
 package com.example.demo.game;
 
+import com.example.demo.common.BaseController;
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class HangManGameController implements Initializable {
+public class HangManGameController extends BaseController {
 
     @FXML
-    public JFXButton TranslaterButton, HomeButton, GameButton, SearchButton;
-
-    public JFXButton CloseButton, MinimizeButton;
-
-    public HBox headBar;
+    public JFXButton GameButton;
 
     public Text wordDisplay, messageDisplay;
 
@@ -45,24 +34,12 @@ public class HangManGameController implements Initializable {
 
     private HangmanGame game;
     private Map<Character, JFXButton> letterButtons;
-    private double xOffset = 0, yOffset = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        headBar.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
-        });
-
-        headBar.setOnMouseDragged(event -> {
-            Stage stage = (Stage) headBar.getScene().getWindow();
-            stage.setX(event.getScreenX() - xOffset);
-            stage.setY(event.getScreenY() - yOffset);
-        });
 
         game = new HangmanGame();
         initializeGame();
-
         bodyParts = new ArrayList<>();
         bodyParts.add(head);
         bodyParts.add(body);
@@ -70,12 +47,9 @@ public class HangManGameController implements Initializable {
         bodyParts.add(rightArm);
         bodyParts.add(leftLeg);
         bodyParts.add(rightLeg);
-
         bodyParts.forEach(part -> part.setOpacity(0));
-
         game = new HangmanGame();
         initializeGame();
-
     }
 
     private void initializeGame() {
@@ -155,7 +129,6 @@ public class HangManGameController implements Initializable {
         }
     }
 
-
     private void restartGame() {
         game.reset();
         letterButtons.values().forEach(button -> {
@@ -167,68 +140,8 @@ public class HangManGameController implements Initializable {
         updateDisplay();
     }
 
-
-    @FXML
-    protected void onMinimizeButtonClick(){
-
-        Stage stage = (Stage) MinimizeButton.getScene().getWindow();
-        stage.setIconified(true);
-
-    }
-
-    @FXML
-    protected void onCloseButtonClick(){
-
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
-
-    }
-
-    @FXML
-    protected void onTranslaterButtonClick() {
-        try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/translate-view.fxml"));
-            Stage stage = (Stage) TranslaterButton.getScene().getWindow();
-            stage.setScene(new Scene(translateView));
-            stage.setTitle("Translator");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Error loading Translate view: " + e.getMessage());
-        }
-    }
-
-    @FXML
-    protected void onHomeButtonClick() {
-        try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/home-view.fxml"));
-            Stage stage = (Stage) HomeButton.getScene().getWindow();
-            stage.setScene(new Scene(translateView));
-            stage.setTitle("Dictionary Application");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Error loading Translate view: " + e.getMessage());
-        }
-    }
-
     @FXML
     protected void onGameButtonClick() {
-
-
-    }
-
-    @FXML
-    protected void onSearchButtonClick() {
-
-        try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/search-view.fxml"));
-            Stage stage = (Stage) SearchButton.getScene().getWindow();
-            stage.setScene(new Scene(translateView));
-            stage.setTitle("Search");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("Error loading Translate view: " + e.getMessage());
-        }
-
     }
 
     @FXML
@@ -241,6 +154,5 @@ public class HangManGameController implements Initializable {
         messageDisplay.setText("");
         updateDisplay();
     }
-
 
 }
