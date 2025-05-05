@@ -9,6 +9,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -131,21 +134,105 @@
                <children>
                   <AnchorPane prefHeight="398.0" prefWidth="750.0">
                      <children>
-                        <Line endX="530.5" endY="64.73552703857422" layoutX="-84.0" layoutY="-11.0" startX="528.9999389648438" startY="288.20001220703125" strokeWidth="5.0" />
-                        <Line endX="523.800048828125" endY="247.73553466796875" layoutX="-224.0" layoutY="33.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0" />
-                        <Line endX="666.800048828125" endY="291.23553466796875" layoutX="-263.0" layoutY="-13.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0" />
-                        <Line endX="576.800048828125" endY="247.73553466796875" layoutX="-225.0" layoutY="-194.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0" />
-                        <Line endX="645.300048828125" endY="195.73553466796875" layoutX="-296.0" layoutY="-142.0" startX="645.300048828125" startY="229.60000610351562" strokeWidth="5.0" />
+                        <Line endX="530.5" endY="64.73552703857422" layoutX="-84.0" layoutY="-11.0" startX="528.9999389648438" startY="288.20001220703125" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="523.800048828125" endY="247.73553466796875" layoutX="-224.0" layoutY="33.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="666.800048828125" endY="291.23553466796875" layoutX="-263.0" layoutY="-13.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="576.800048828125" endY="247.73553466796875" layoutX="-225.0" layoutY="-194.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="645.300048828125" endY="195.73553466796875" layoutX="-296.0" layoutY="-142.0" startX="645.300048828125" startY="229.60000610351562" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
                         <Circle fx:id="head" fill="WHITE" layoutX="348.0" layoutY="112.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
                         <Line fx:id="body" endX="694.0" endY="290.20001220703125" layoutX="-346.0" layoutY="-82.0" startX="694.0" startY="216.0" strokeWidth="5.0" />
                         <Line fx:id="rightArm" endX="683.2000732421875" endY="278.0" layoutX="-360.0" layoutY="-109.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0" />
                         <Line fx:id="leftArm" endX="721.4644775390625" endY="271.72894287109375" layoutX="-350.0" layoutY="-99.0" startX="698.0" startY="245.26446533203125" strokeWidth="5.0" />
                         <Line fx:id="leftLeg" endX="722.5999755859375" endY="255.20001220703125" layoutX="-349.0" layoutY="-27.0" startX="697.0" startY="237.70001220703125" strokeWidth="5.0" />
                         <Line fx:id="rightLeg" endX="666.0" endY="253.20001220703125" layoutX="-343.0" layoutY="-25.0" startX="688.5" startY="235.70001220703125" strokeWidth="5.0" />
-                        <JFXButton fx:id="restartButton" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" styleClass="selected" stylesheets="@../../../animation/button.css" text="RESTART">
+                        <JFXButton fx:id="restartButton" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="RESTART">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="selected" />
+                              <String fx:value="mixborder" />
+                           </styleClass>
                         </JFXButton>
                         <Text fx:id="wordDisplay" layoutX="38.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold';" textAlignment="CENTER" wrappingWidth="678.3999328613281" />
                         <Text fx:id="messageDisplay" layoutX="175.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" textAlignment="CENTER" wrappingWidth="400.0" />

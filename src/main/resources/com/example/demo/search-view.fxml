@@ -129,7 +129,7 @@
          <center>
             <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
                <HBox alignment="CENTER" spacing="10">
-                  <TextField fx:id="textField" prefHeight="40" prefWidth="300" promptText="Enter word to search...">
+                  <TextField fx:id="textField" prefHeight="40" prefWidth="300" promptText="Enter word to search..." style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="mixborder" stylesheets="@../../../animation/button.css">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -170,8 +170,8 @@
                </HBox>
 
                <HBox spacing="10" VBox.vgrow="ALWAYS">
-                  <ListView fx:id="listView" onMouseClicked="#clickEvent" prefWidth="300" />
-                  <TextArea fx:id="textArea" wrapText="true" HBox.hgrow="ALWAYS">
+                  <ListView fx:id="listView" onMouseClicked="#clickEvent" prefWidth="300" style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="mixborder" stylesheets="@../../../animation/button.css" />
+                  <TextArea fx:id="textArea" style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="mixborder" stylesheets="@../../../animation/button.css" wrapText="true" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="16.0" />
                      </font>
