@@ -1,6 +1,7 @@
 package com.example.demo.dictionary;
 
 import com.example.demo.common.BaseController;
+import com.example.demo.common.TransitionController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class SearchController extends BaseController {
+public class SearchController extends TransitionController {
     private DictionaryManagement dictionaryManagement;
     private ObservableList list = FXCollections.observableArrayList();
 
@@ -33,6 +34,10 @@ public class SearchController extends BaseController {
         }
 
         textField.textProperty().addListener((observable, oldValue, newValue) -> suggestEvent());
+
+        fadeInTransition(listView);
+        fadeInTransition(textArea);
+        slideInTransition(textField, true);
     }
 
     @FXML

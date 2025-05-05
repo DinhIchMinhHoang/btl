@@ -1,16 +1,19 @@
 package com.example.demo.game;
 
-import com.example.demo.common.BaseController;
+import com.example.demo.common.TransitionController;
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
+
 import java.net.URL;
 import java.util.*;
 
-public class HangManGameController extends BaseController {
+public class HangManGameController extends TransitionController {
 
     @FXML
     public JFXButton GameButton;
@@ -37,9 +40,9 @@ public class HangManGameController extends BaseController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        super.initialize(location, resources);
         game = new HangmanGame();
-        initializeGame();
+
         bodyParts = new ArrayList<>();
         bodyParts.add(head);
         bodyParts.add(body);
@@ -47,10 +50,29 @@ public class HangManGameController extends BaseController {
         bodyParts.add(rightArm);
         bodyParts.add(leftLeg);
         bodyParts.add(rightLeg);
-        bodyParts.forEach(part -> part.setOpacity(0));
-        game = new HangmanGame();
+        bodyParts.forEach(part -> {
+            part.setOpacity(0);
+            fadeInTransition(part);
+        });
+
         initializeGame();
+        slideInTransition(wordDisplay, false);
+        slideInTransition(messageDisplay, true);
+        animateLetterButtons();
     }
+
+    private void animateLetterButtons() {
+        letterButtons.forEach((letter, button) -> {
+            button.setOpacity(0);
+            FadeTransition fadeIn = new FadeTransition(Duration.millis(200), button);
+            fadeIn.setFromValue(0.0);
+            fadeIn.setToValue(1.0);
+            int index = letter - 'A';
+            fadeIn.setDelay(Duration.millis(50 * index));
+            fadeIn.play();
+        });
+    }
+
 
     private void initializeGame() {
         letterButtons = new HashMap<>();
