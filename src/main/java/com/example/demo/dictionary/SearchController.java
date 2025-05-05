@@ -26,6 +26,7 @@ public class SearchController extends TransitionController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        super.initialize(location, resources);
         dictionaryManagement = new DictionaryManagement();
         try {
             dictionaryManagement.insertFromFile();
