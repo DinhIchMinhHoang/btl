@@ -1,8 +1,7 @@
-package com.example.demo;
+package com.example.demo.auth;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
-import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -53,7 +52,7 @@ public class SignUpController {
     @FXML
     protected void onSwitchLoginButtonClick() {
         try {
-            Parent homeView = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+            Parent homeView = FXMLLoader.load(getClass().getResource("/com/example/demo/login-view.fxml"));
             Stage stage = (Stage) SwitchLoginButton.getScene().getWindow();
             stage.setScene(new Scene(homeView));
             stage.setTitle("Login");
@@ -79,7 +78,7 @@ public class SignUpController {
 
         if(userManager.addUser(newUser)) {
             try {
-                Parent homeView = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+                Parent homeView = FXMLLoader.load(getClass().getResource("/com/example/demo/login-view.fxml"));
                 Stage stage = (Stage) RegisteButton.getScene().getWindow();
                 stage.setScene(new Scene(homeView));
                 stage.setTitle("Login");

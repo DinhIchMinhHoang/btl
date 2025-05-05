@@ -1,16 +1,14 @@
-package com.example.demo;
+package com.example.demo.common;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.fxml.Initializable;
-import javax.print.DocFlavor;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -59,7 +57,7 @@ public class HomeViewController implements Initializable {
     @FXML
     protected void onTranslaterButtonClick() {
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("translate-view.fxml"));
+            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/translate-view.fxml"));
             Stage stage = (Stage) TranslaterButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
             stage.setTitle("Translator");
@@ -78,7 +76,7 @@ public class HomeViewController implements Initializable {
     protected void onGameButtonClick() {
 
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("game-view.fxml"));
+            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/game-view.fxml"));
             Stage stage = (Stage) GameButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
             stage.setTitle("Hangman Game");
@@ -93,7 +91,7 @@ public class HomeViewController implements Initializable {
     protected void onSearchButtonClick() {
 
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/search-view.fxml"));
             Stage stage = (Stage) SearchButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
             stage.setTitle("Search");

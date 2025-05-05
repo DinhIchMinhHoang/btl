@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.game;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,7 +25,7 @@ public class HangmanGame {
 
     private void selectRandomWord() {
         try {
-            List<String> words = Files.readAllLines(Paths.get("demo/src/main/resources/gameWords.txt"));
+            List<String> words = Files.readAllLines(Paths.get("demo/src/main/resources/data/gameWords.txt"));
             word = words.get(new Random().nextInt(words.size())).trim().toUpperCase();
             guessedLetters = new char[word.length()];
             Arrays.fill(guessedLetters, '_');

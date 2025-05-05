@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.auth.LoginController">
    <children>
       <JFXPasswordField fx:id="Password" labelFloat="true" layoutX="626.0" layoutY="374.0" prefHeight="10.0" prefWidth="300.0" promptText="Password">
          <font>

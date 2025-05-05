@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.dictionary;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
@@ -79,7 +79,7 @@ public class SearchController implements Initializable {
 
     @FXML
     protected void onHomeButtonClick() {
-        navigateToView("home-view.fxml", "Dictionary Application");
+        navigateToView("/com/example/demo/home-view.fxml", "Dictionary Application");
     }
 
     @FXML
@@ -89,12 +89,12 @@ public class SearchController implements Initializable {
 
     @FXML
     protected void onTranslaterButtonClick() {
-        navigateToView("translate-view.fxml", "Translate");
+        navigateToView("/com/example/demo/translate-view.fxml", "Translate");
     }
 
     @FXML
     protected void onGameButtonClick() {
-        navigateToView("game-view.fxml", "Game");
+        navigateToView("/com/example/demo/game-view.fxml", "Game");
     }
 
     private void navigateToView(String fxmlFile, String title) {

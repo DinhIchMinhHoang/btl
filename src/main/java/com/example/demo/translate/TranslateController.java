@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.translate;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
@@ -96,7 +95,7 @@ public class TranslateController implements Initializable {
     @FXML
     protected void onHomeButtonClick() {
         try {
-            Parent homeView = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            Parent homeView = FXMLLoader.load(getClass().getResource("/com/example/demo/home-view.fxml"));
             Stage stage = (Stage) HomeButton.getScene().getWindow();
             stage.setScene(new Scene(homeView));
             stage.setTitle("Dictionary Application");
@@ -110,7 +109,7 @@ public class TranslateController implements Initializable {
     protected void onGameButtonClick() {
 
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("game-view.fxml"));
+            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/game-view.fxml"));
             Stage stage = (Stage) GameButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
             stage.setTitle("Hangman Game");
@@ -131,7 +130,7 @@ public class TranslateController implements Initializable {
     protected void onSearchButtonClick() {
 
         try {
-            Parent translateView = FXMLLoader.load(getClass().getResource("search-view.fxml"));
+            Parent translateView = FXMLLoader.load(getClass().getResource("/com/example/demo/search-view.fxml"));
             Stage stage = (Stage) SearchButton.getScene().getWindow();
             stage.setScene(new Scene(translateView));
             stage.setTitle("Search");

@@ -1,14 +1,12 @@
-package com.example.demo;
+package com.example.demo.auth;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -54,7 +52,7 @@ public class LoginController {
     @FXML
     protected void onSignUpButtonClick() {
         try {
-            Parent homeView = FXMLLoader.load(getClass().getResource("signup-view.fxml"));
+            Parent homeView = FXMLLoader.load(getClass().getResource("/com/example/demo/signup-view.fxml"));
             Stage stage = (Stage) SignUpButton.getScene().getWindow();
             stage.setScene(new Scene(homeView));
             stage.setTitle("Sign Up");
@@ -75,7 +73,7 @@ public class LoginController {
 
         if (userManager.verifyUser(username, password)) {
             try {
-                Parent homeView = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+                Parent homeView = FXMLLoader.load(getClass().getResource("/com/example/demo/home-view.fxml"));
                 Stage stage = (Stage) LoginButton.getScene().getWindow();
                 stage.setScene(new Scene(homeView));
                 stage.setTitle("Dictionary Application");

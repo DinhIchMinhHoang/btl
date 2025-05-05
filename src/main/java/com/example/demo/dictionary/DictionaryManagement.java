@@ -1,7 +1,4 @@
-package com.example.demo;
-
-import com.sun.speech.freetts.Voice;
-import com.sun.speech.freetts.VoiceManager;
+package com.example.demo.dictionary;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -98,7 +95,7 @@ public class DictionaryManagement {
     public void insertFromFile() throws IOException {
         BufferedReader buff = null;
         try {
-            InputStream inputStream = getClass().getResourceAsStream("/dtb.txt");
+            InputStream inputStream = getClass().getResourceAsStream("/data/dtb.txt");
             if (inputStream == null) {
                 throw new IOException("Dictionary file not found in resources");
             }
@@ -228,21 +225,17 @@ public class DictionaryManagement {
      * @param words chứa từ muốn phát âm
      */
     public static void dictionarySpeak(String words) {
-        Voice voice;
-        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
-        voice = VoiceManager.getInstance().getVoice("kevin16");
-        if (voice != null) {
-            voice.allocate();
-            try {
-                voice.setRate(150);
-                voice.setPitch(150);
-                voice.setVolume(3);
-                voice.speak(words);
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-        } else {
-            throw new IllegalStateException("Cannot find voice: kevin16");
+        try {
+            String[] command = new String[] {
+                    "cmd.exe",
+                    "/c",
+                    "mshta vbscript:Execute(\"CreateObject(\"\"SAPI.SpVoice\"\").Speak(\"\"" + words + "\"\")(window.close)\")"
+            };
+
+            Runtime.getRuntime().exec(command);
+        } catch (Exception e) {
+            System.err.println("Error in text-to-speech: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -312,7 +305,7 @@ public class DictionaryManagement {
      * @throws IOException để đẩy ngoại lệ ra ngoài.
      */
     public void dictionarySave() throws IOException {
-        String resourcePath = "demo/src/main/resources/dtb.txt";
+        String resourcePath = "demo/src/main/resources/data/dtb.txt";
 
         try (FileWriter fileWriter = new FileWriter(resourcePath)) {
             for (int i = 0; i < dictionary.getLists().length; i++) {
