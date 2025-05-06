@@ -50,7 +50,42 @@ public class AccountController extends TransitionController {
         if (currentUser != null) {
             usernameField.setPromptText(currentUser.getUsername());
         }
-        fadeInTransition(accountFormContainer);
+
+        usernameField.setOpacity(0);
+        currentPasswordField.setOpacity(0);
+        newPasswordField.setOpacity(0);
+        saveChangesButton.setOpacity(0);
+        logoutButton.setOpacity(0);
+        deleteAccountButton.setOpacity(0);
+
+        javafx.application.Platform.runLater(() -> {
+            javafx.animation.Timeline timeline = new javafx.animation.Timeline();
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.ZERO,
+                            e -> slideInTransition(usernameField, false))
+            );
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.millis(150),
+                            e -> slideInTransition(currentPasswordField, false))
+            );
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.millis(300),
+                            e -> slideInTransition(newPasswordField, false))
+            );
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.millis(450),
+                            e -> fadeInTransition(saveChangesButton))
+            );
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.millis(600),
+                            e -> fadeInTransition(logoutButton))
+            );
+            timeline.getKeyFrames().add(
+                    new javafx.animation.KeyFrame(javafx.util.Duration.millis(750),
+                            e -> fadeInTransition(deleteAccountButton))
+            );
+            timeline.play();
+        });
         setupEventHandlers();
     }
 
