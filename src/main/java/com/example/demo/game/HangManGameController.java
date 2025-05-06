@@ -1,13 +1,18 @@
 package com.example.demo.game;
 
+import com.example.demo.auth.User;
+import com.example.demo.auth.UserManager;
 import com.example.demo.common.TransitionController;
 import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -29,6 +34,14 @@ public class HangManGameController extends TransitionController {
 
     public List<javafx.scene.Node> bodyParts;
 
+    @FXML
+    private VBox leaderboardBox;
+
+    @FXML
+    private VBox leaderboardEntries;
+
+    private UserManager userManager;
+
 
     @FXML
     private JFXButton btnQ, btnW, btnE, btnR, btnT, btnY, btnU, btnI, btnO, btnP,
@@ -43,6 +56,7 @@ public class HangManGameController extends TransitionController {
     public void initialize(URL location, ResourceBundle resources) {
         super.initialize(location, resources);
         game = new HangmanGame();
+        userManager = new UserManager();
 
         bodyParts = new ArrayList<>();
         bodyParts.add(head);
@@ -60,6 +74,24 @@ public class HangManGameController extends TransitionController {
         slideInTransition(wordDisplay, false);
         slideInTransition(messageDisplay, true);
         animateLetterButtons();
+
+        updateLeaderboard();
+    }
+
+    private void updateLeaderboard() {
+        leaderboardEntries.getChildren().clear();
+
+        List<User> topUsers = userManager.getTopUsers(5);
+
+        for (User user : topUsers) {
+            Text entry = new Text(user.getUsername() + ": " + user.getStreak() + " streak");
+            entry.setFont(Font.font("System", 14));
+            entry.setFill(Color.DARKBLUE);
+
+            leaderboardEntries.getChildren().add(entry);
+        }
+
+        leaderboardEntries.setPadding(new Insets(10, 0, 0, 0));
     }
 
     private void fadeStickmanPart(Node node) {
@@ -152,12 +184,19 @@ public class HangManGameController extends TransitionController {
         wordDisplay.setStyle("-fx-font-size: 40px; -fx-font-family: monospace; -fx-letter-spacing: 1px;");
 
         if (game.isGameOver()) {
-            if (game.isWon()) {
+            boolean won = game.isWon();
+            if (won) {
                 messageDisplay.setText("Congratulations! You won!");
                 messageDisplay.setFill(Color.GREEN);
             } else {
                 messageDisplay.setText("Game Over! The word was: " + game.getActualWord());
                 messageDisplay.setFill(Color.RED);
+            }
+
+            User currentUser = userManager.getCurrentUser();
+            if (currentUser != null) {
+                userManager.updateUserStats(currentUser, won);
+                updateLeaderboard();
             }
         }
     }
@@ -171,6 +210,7 @@ public class HangManGameController extends TransitionController {
         messageDisplay.setText("");
         bodyParts.forEach(part -> part.setOpacity(0));
         updateDisplay();
+        updateLeaderboard();
     }
 
     @FXML
@@ -185,7 +225,9 @@ public class HangManGameController extends TransitionController {
             button.setStyle("");
         });
         messageDisplay.setText("");
+        bodyParts.forEach(part -> part.setOpacity(0));
         updateDisplay();
+        updateLeaderboard();
     }
 
 }

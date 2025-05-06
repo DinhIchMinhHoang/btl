@@ -236,6 +236,18 @@
                         </JFXButton>
                         <Text fx:id="wordDisplay" layoutX="38.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold';" textAlignment="CENTER" wrappingWidth="678.3999328613281" />
                         <Text fx:id="messageDisplay" layoutX="175.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" textAlignment="CENTER" wrappingWidth="400.0" />
+
+                        <!-- Leaderboard -->
+                        <VBox fx:id="leaderboardBox" layoutX="550.0" layoutY="50.0" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #3498db; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#3498db" strokeType="OUTSIDE" strokeWidth="0.0" text="Win Streak Leaderboard" textAlignment="CENTER" wrappingWidth="160.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <VBox fx:id="leaderboardEntries" prefHeight="160.0" prefWidth="160.0" spacing="5.0" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="750.0">

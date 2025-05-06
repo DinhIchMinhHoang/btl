@@ -7,6 +7,7 @@ import java.util.List;
 
 public class UserManager {
     private static final String UserFile = "demo/src/main/resources/data/user.txt";
+    private static User currentUser;
 
     public UserManager() {
         createFileIfNotExists();
@@ -16,9 +17,7 @@ public class UserManager {
         try {
             File file = new File(UserFile);
             if (!file.exists()) {
-                // Create the resources directory if it doesn't exist
                 file.getParentFile().mkdirs();
-                // Create the file
                 file.createNewFile();
                 System.out.println("Created new user file at: " + UserFile);
             }
@@ -44,8 +43,12 @@ public class UserManager {
                 System.out.println("Line read: '" + line + "'");
                 if (!line.trim().isEmpty()) {
                     String[] parts = line.split(",");
-                    if (parts.length == 2) {
-                        users.add(new User(parts[0].trim(), parts[1].trim()));
+                    if (parts.length >= 2) {
+                        if (parts.length == 2) {
+                            users.add(new User(parts[0].trim(), parts[1].trim()));
+                        } else if (parts.length >= 3) {
+                            users.add(new User(parts[0].trim(), parts[1].trim(), Integer.parseInt(parts[2].trim())));
+                        }
                         System.out.println("Added user: " + parts[0].trim());
                     }
                 }
@@ -72,7 +75,7 @@ public class UserManager {
         try (FileWriter fw = new FileWriter(UserFile, true);
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
-            out.println(user.getUsername() + "," + user.getPassword());
+            out.println(user.toString());
             System.out.println("Added new user: " + user.getUsername());
             return true;
         } catch (IOException e) {
@@ -90,10 +93,61 @@ public class UserManager {
             System.out.println("User in file: '" + user.getUsername() + "' , '" + user.getPassword() + "'");
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 System.out.println("Match found!");
+                currentUser = user;
                 return true;
             }
         }
         System.out.println("No match found.");
         return false;
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(User user) {
+        currentUser = user;
+    }
+
+    public void updateUserStats(User user, boolean won) {
+        if (user == null) return;
+
+        if (won) {
+            user.incrementWins();
+        } else {
+            user.incrementLosses();
+        }
+
+        updateUserInFile(user);
+    }
+
+    private void updateUserInFile(User updatedUser) {
+        List<User> users = getAllUsers();
+        try (FileWriter fw = new FileWriter(UserFile);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
+
+            for (User user : users) {
+                if (user.getUsername().equals(updatedUser.getUsername())) {
+                    out.println(updatedUser.toString());
+                } else {
+                    out.println(user.toString());
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error updating user stats: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public List<User> getTopUsers(int limit) {
+        List<User> users = getAllUsers();
+        users.sort((u1, u2) -> Integer.compare(u2.getStreak(), u1.getStreak()));
+
+        if (users.size() <= limit) {
+            return users;
+        } else {
+            return users.subList(0, limit);
+        }
     }
 }
