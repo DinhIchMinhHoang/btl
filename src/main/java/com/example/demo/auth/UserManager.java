@@ -121,7 +121,7 @@ public class UserManager {
         updateUserInFile(user);
     }
 
-    private void updateUserInFile(User updatedUser) {
+    public void updateUserInFile(User updatedUser) {
         List<User> users = getAllUsers();
         try (FileWriter fw = new FileWriter(UserFile);
              BufferedWriter bw = new BufferedWriter(fw);
@@ -148,6 +148,31 @@ public class UserManager {
             return users;
         } else {
             return users.subList(0, limit);
+        }
+    }
+
+    public boolean deleteUser(String username) {
+        List<User> users = getAllUsers();
+        boolean userFound = false;
+
+        try (FileWriter fw = new FileWriter(UserFile);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
+
+            for (User user : users) {
+                if (!user.getUsername().equals(username)) {
+                    out.println(user.toString());
+                } else {
+                    userFound = true;
+                    System.out.println("Deleted user: " + username);
+                }
+            }
+
+            return userFound;
+        } catch (IOException e) {
+            System.out.println("Error deleting user: " + e.getMessage());
+            e.printStackTrace();
+            return false;
         }
     }
 }

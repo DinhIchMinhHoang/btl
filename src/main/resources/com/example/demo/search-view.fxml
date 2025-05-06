@@ -12,6 +12,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.dictionary.SearchController">
@@ -58,6 +61,34 @@
          <left>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="20.0" style="-fx-background-radius: 20;" BorderPane.alignment="CENTER">
                <children>
+                  <JFXButton fx:id="accountButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onAccountButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="selected4" stylesheets="@../../../animation/button.css" text="Account">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
                   <ImageView fitHeight="180.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/book.png" />

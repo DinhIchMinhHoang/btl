@@ -114,3 +114,18 @@
 .close:hover{
     -fx-background-color: #D60A17;
 }
+.selected4{
+    -fx-cursor: hand;
+}
+.selected4:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+.selected4:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+.selected4-border{
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+    -fx-background-color: #d8d8d8;
+}

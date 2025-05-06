@@ -62,7 +62,7 @@
       <!-- Rest of the code remains the same -->
       <Pane prefHeight="600.0" prefWidth="500.0" stylesheets="@../../../animation/backGround.css">
          <children>
-            <JFXButton fx:id="SignUpButton" layoutX="150.0" layoutY="430.0" onAction="#onSignUpButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../animation/button.css" text="Sign up">
+            <JFXButton fx:id="SignUpButton" buttonType="RAISED" layoutX="150.0" layoutY="430.0" onAction="#onSignUpButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../animation/button.css" text="Sign up">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -88,7 +88,7 @@
             <String fx:value="radius" />
          </styleClass>
       </Pane>
-      <JFXButton fx:id="LoginButton" layoutX="676.0" layoutY="471.0" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Login">
+      <JFXButton fx:id="LoginButton" buttonType="RAISED" layoutX="676.0" layoutY="471.0" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Login">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

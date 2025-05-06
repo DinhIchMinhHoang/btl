@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public abstract class BaseController implements Initializable {
 
     @FXML
-    protected JFXButton TranslaterButton, HomeButton, GameButton, SearchButton;
+    protected JFXButton TranslaterButton, HomeButton, GameButton, SearchButton, accountButton;
 
     @FXML
     protected JFXButton CloseButton, MinimizeButton;
@@ -86,5 +86,10 @@ public abstract class BaseController implements Initializable {
     @FXML
     protected void onSearchButtonClick() {
         navigateToView("/com/example/demo/search-view.fxml", "Search");
+    }
+
+    @FXML
+    protected void onAccountButtonClick() {
+        navigateToView("/com/example/demo/account-view.fxml", "Account");
     }
 }

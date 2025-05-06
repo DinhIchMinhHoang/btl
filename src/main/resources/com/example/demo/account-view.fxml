@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.auth.AccountController">
+   <children>
+      <BorderPane prefHeight="590.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="accountFormContainer" alignment="CENTER" maxWidth="546.0" prefHeight="566.0" prefWidth="505.0" spacing="40.0" styleClass="white-background">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="263.0" text="Manage Your Account" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="usernameField" labelFloat="true" prefHeight="40.0" prefWidth="300.0" promptText="Username">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="currentPasswordField" labelFloat="true" prefHeight="40.0" prefWidth="300.0" promptText="Current Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="newPasswordField" labelFloat="true" prefHeight="40.0" prefWidth="300.0" promptText="New Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                        </JFXPasswordField>
+                        <Label fx:id="warningLabel" alignment="CENTER" prefHeight="20.0" prefWidth="300.0" text="Warning message goes here" textAlignment="CENTER" textFill="RED" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <JFXButton fx:id="logoutButton" buttonType="RAISED" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../../../animation/button.css" text="Logout">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                                 <styleClass>
+                                    <String fx:value="selected3" />
+                                    <String fx:value="selected4-border" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton fx:id="saveChangesButton" buttonType="RAISED" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../../../animation/button.css" text="Save Changes">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                                 <styleClass>
+                                    <String fx:value="selected2" />
+                                    <String fx:value="selected4-border" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton fx:id="deleteAccountButton" buttonType="RAISED" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../../../animation/button.css" text="Delete Account">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                                 <styleClass>
+                                    <String fx:value="selected1" />
+                                    <String fx:value="selected4-border" />
+                                 </styleClass>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="gradient-background" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../animation/backGround.css" />
+               </stylesheets>
+            </VBox>
+         </center>
+         <left>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="20.0" style="-fx-background-radius: 20;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../../../animation/button.css" text="Back">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="selected4" />
+                        <String fx:value="selected4-border" />
+                     </styleClass>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+               <styleClass>
+                  <String fx:value="white-background" />
+                  <String fx:value="right-side-border" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
+               </stylesheets>
+            </VBox>
+         </left>
+         <top>
+            <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../animation/button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../animation/button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <stylesheets>
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="mixcolor" />
+                  <String fx:value="bottom-radius" />
+               </styleClass>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

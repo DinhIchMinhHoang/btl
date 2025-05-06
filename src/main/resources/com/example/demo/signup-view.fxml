@@ -16,7 +16,7 @@
             <String fx:value="radius1" />
          </styleClass>
          <children>
-            <JFXButton fx:id="SwitchLoginButton" layoutX="150.0" layoutY="430.0" onAction="#onSwitchLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../animation/button.css" text="Login">
+            <JFXButton fx:id="SwitchLoginButton" buttonType="RAISED" layoutX="150.0" layoutY="430.0" onAction="#onSwitchLoginButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #fff;" styleClass="selected" stylesheets="@../../../animation/button.css" text="Login">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -101,7 +101,7 @@
             </LinearGradient>
          </focusColor>
       </JFXTextArea>
-      <JFXButton fx:id="RegisteButton" layoutX="130.0" layoutY="430.0" onAction="#onResgisterButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Register">
+      <JFXButton fx:id="RegisteButton" buttonType="RAISED" layoutX="130.0" layoutY="430.0" onAction="#onResgisterButtonClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Register">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
