@@ -1,0 +1,131 @@
+.selected:hover{
+    -fx-background-color: #e1e1e1;
+}
+.selected:pressed{
+    -fx-background-color: #b8b8b8;
+}
+.selected{
+    -fx-cursor: hand;
+}
+
+
+.selected0:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #1976D2;
+    -fx-border-width: 0 3 0 0;
+}
+.selected0:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #1976D2;
+    -fx-border-width: 0 3 0 0;
+}
+.selected-border:hover{
+    -fx-border-color: #1976D2;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #e1e1e1;
+}
+.selected-border{
+    -fx-border-color: #1976D2;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected0{
+    -fx-cursor: hand;
+}
+
+
+.selected2:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2-border{
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected2-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 0 3 0 0;
+}
+.selected2{
+    -fx-cursor: hand;
+}
+
+
+.selected3:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3-border{
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected3-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #6A0DAD;
+    -fx-border-width: 0 3 0 0;
+}
+.selected3{
+    -fx-cursor: hand;
+}
+
+
+.selected1-border:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1-border{
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #d8d8d8;
+}
+.selected1{
+    -fx-cursor: hand;
+}
+.selected1:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+}
+.selected1:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: #E53935 ;
+    -fx-border-width: 0 3 0 0;
+}
+.mixborder{
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+
+.close:hover{
+    -fx-background-color: #D60A17;
+}
+.selected4{
+    -fx-cursor: hand;
+}
+.selected4:hover{
+    -fx-background-color: #e1e1e1;
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+.selected4:pressed{
+    -fx-background-color: #b8b8b8;
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+}
+.selected4-border{
+    -fx-border-color: linear-gradient(to top left, #2fe0ff, #ec00fd);
+    -fx-background-color: #d8d8d8;
+}

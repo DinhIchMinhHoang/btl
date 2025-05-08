@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.game.HangManGameController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox fx:id="headBar" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="MinimizeButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onMinimizeButtonClick" prefHeight="36.0" prefWidth="50.0" style="-fx-background-radius: 0;" styleClass="selected" stylesheets="@../../../animation/button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="CloseButton" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" onAction="#onCloseButtonClick" prefHeight="44.0" prefWidth="50.0" ripplerFill="#9c0311" style="-fx-background-radius: 0;" styleClass="close" stylesheets="@../../../animation/button.css" text=" ">
+                     <font>
+                        <Font size="0.001" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <stylesheets>
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="mixcolor" />
+                  <String fx:value="bottom-radius" />
+               </styleClass>
+            </HBox>
+         </top>
+         <left>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="250.0" spacing="20.0" style="-fx-background-radius: 20;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="accountButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onAccountButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="selected4" stylesheets="@../../../animation/button.css" text="Account">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <ImageView fitHeight="180.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/book.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="HomeButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="210.0" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#fd0000" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected1" stylesheets="@../../../animation/button.css" text="Home">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="SearchButton" buttonType="RAISED" graphicTextGap="20.0" onAction="#onSearchButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#a000fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected3" stylesheets="@../../../animation/button.css" text="Search">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="TranslaterButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="250.0" onAction="#onTranslaterButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#0013fd" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="selected0" stylesheets="@../../../animation/button.css" text="Translate">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/translate.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="GameButton" buttonType="RAISED" graphicTextGap="20.0" layoutX="10.0" layoutY="330.0" onAction="#onGameButtonClick" prefHeight="40.0" prefWidth="200.0" ripplerFill="#08fd00" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../../../animation/button.css" text="Game">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/game.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="selected2" />
+                        <String fx:value="selected2-border" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+               <styleClass>
+                  <String fx:value="white-background" />
+                  <String fx:value="right-side-border" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../animation/backGround.css" />
+                  <URL value="@../../../animation/homeView.css" />
+               </stylesheets>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="398.0" prefWidth="750.0">
+                     <children>
+                        <Line endX="530.5" endY="64.73552703857422" layoutX="-84.0" layoutY="-11.0" startX="528.9999389648438" startY="288.20001220703125" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="523.800048828125" endY="247.73553466796875" layoutX="-224.0" layoutY="33.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="666.800048828125" endY="291.23553466796875" layoutX="-263.0" layoutY="-13.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="576.800048828125" endY="247.73553466796875" layoutX="-225.0" layoutY="-194.0" startX="669.0" startY="247.73553466796875" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Line endX="645.300048828125" endY="195.73553466796875" layoutX="-296.0" layoutY="-142.0" startX="645.300048828125" startY="229.60000610351562" strokeWidth="5.0">
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.18431372940540314" green="0.8784313797950745" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9254902005195618" blue="0.9921568632125854" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke></Line>
+                        <Circle fx:id="head" fill="WHITE" layoutX="348.0" layoutY="112.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Line fx:id="body" endX="694.0" endY="290.20001220703125" layoutX="-346.0" layoutY="-82.0" startX="694.0" startY="216.0" strokeWidth="5.0" />
+                        <Line fx:id="rightArm" endX="683.2000732421875" endY="278.0" layoutX="-360.0" layoutY="-109.0" startX="704.4644775390625" startY="258.79998779296875" strokeWidth="5.0" />
+                        <Line fx:id="leftArm" endX="721.4644775390625" endY="271.72894287109375" layoutX="-350.0" layoutY="-99.0" startX="698.0" startY="245.26446533203125" strokeWidth="5.0" />
+                        <Line fx:id="leftLeg" endX="722.5999755859375" endY="255.20001220703125" layoutX="-349.0" layoutY="-27.0" startX="697.0" startY="237.70001220703125" strokeWidth="5.0" />
+                        <Line fx:id="rightLeg" endX="666.0" endY="253.20001220703125" layoutX="-343.0" layoutY="-25.0" startX="688.5" startY="235.70001220703125" strokeWidth="5.0" />
+                        <JFXButton fx:id="restartButton" buttonType="RAISED" layoutX="61.0" layoutY="58.0" onAction="#onRestartButtonClick" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2;" stylesheets="@../../../animation/button.css" text="RESTART">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="selected" />
+                              <String fx:value="mixborder" />
+                           </styleClass>
+                        </JFXButton>
+                        <Text fx:id="wordDisplay" layoutX="38.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40px; -fx-font-family: 'System Bold';" textAlignment="CENTER" wrappingWidth="678.3999328613281" />
+                        <Text fx:id="messageDisplay" layoutX="175.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" textAlignment="CENTER" wrappingWidth="400.0" />
+
+                        <!-- Leaderboard -->
+                        <VBox fx:id="leaderboardBox" layoutX="550.0" layoutY="50.0" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #3498db; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#3498db" strokeType="OUTSIDE" strokeWidth="0.0" text="Win Streak Leaderboard" textAlignment="CENTER" wrappingWidth="160.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <VBox fx:id="leaderboardEntries" prefHeight="160.0" prefWidth="160.0" spacing="5.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnQ" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="Q">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnW" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="W">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnE" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="E">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnR" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="R">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnT" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="T">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnY" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="Y">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnU" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="U">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnI" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="I">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnO" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="O">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnP" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="P">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="3.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnA" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="A">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnS" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="S">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnD" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="D">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnF" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="F">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnG" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="G">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnH" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="H">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnJ" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="J">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnK" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="K">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnL" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="L">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="13.0" prefWidth="750.0">
+                     <children>
+                        <JFXButton fx:id="btnZ" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="Z">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnX" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="X">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnC" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="C">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnV" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="V">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnB" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="B">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnN" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="N">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnM" buttonType="RAISED" styleClass="selected" stylesheets="@../../../animation/button.css" text="M">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
