@@ -16,8 +16,8 @@ The application is designed to support learning English. The application is writ
 
 ## UML diagram
 
-![UML diagram](D:\btl\demo\src\main\resources\img\UML1.jpg)
-![UML diagram](D:\btl\demo\src\main\resources\img\UML2.jpg)
+![UML diagram](UML1.jpg)
+![UML diagram](UML2.jpg)
 
 
 ## Installation
@@ -43,13 +43,13 @@ The application is designed to support learning English. The application is writ
 
 ## Demo
 
-![Demo](D:\btl\demo\src\main\resources\img\loginview.png)
-![Demo](D:\btl\demo\src\main\resources\img\signupview.png)
-![Demo](D:\btl\demo\src\main\resources\img\homeview.png)
-![Demo](D:\btl\demo\src\main\resources\img\accountview.png)
-![Demo](D:\btl\demo\src\main\resources\img\searchview.png)
-![Demo](D:\btl\demo\src\main\resources\img\translateview.png)
-![Demo](D:\btl\demo\src\main\resources\img\gameview.png)
+![Demo](loginview.png)
+![Demo](signupview.png)
+![Demo](homeview.png)
+![Demo](accountview.png)
+![Demo](searchview.png)
+![Demo](translateview.png)
+![Demo](gameview.png)
 
 
 
@@ -63,6 +63,7 @@ The application is designed to support learning English. The application is writ
 7. Improve the user interface.
 
 ## Contributing
+thanks to user Maksym on stackoverflow.com for helping us to complete the translation feature.
 
 ## Project status
 The project is completed.
