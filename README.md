@@ -16,8 +16,8 @@ The application is designed to support learning English. The application is writ
 
 ## UML diagram
 
-![UML diagram](btl/src/main/resources/img/UML1.jpg)
-![UML diagram](btl/src/main/resources/img/UML2.jpg)
+![UML diagram](src/main/resources/img/UML1.jpg)
+![UML diagram](src/main/resources/img/UML2.jpg)
 
 
 ## Installation
@@ -43,13 +43,13 @@ The application is designed to support learning English. The application is writ
 
 ## Demo
 
-![Demo](btl/src/main/resources/img/loginview.png)
-![Demo](btl/src/main/resources/img/signupview.png)
-![Demo](btl/src/main/resources/img/homeview.png)
-![Demo](btl/src/main/resources/img/accountview.png)
-![Demo](btl/src/main/resources/img/searchview.png)
-![Demo](btl/src/main/resources/img/translateview.png)
-![Demo](btl/src/main/resources/img/gameview.png)
+![Demo](src/main/resources/img/loginview.png)
+![Demo](src/main/resources/img/signupview.png)
+![Demo](src/main/resources/img/homeview.png)
+![Demo](src/main/resources/img/accountview.png)
+![Demo](src/main/resources/img/searchview.png)
+![Demo](src/main/resources/img/translateview.png)
+![Demo](src/main/resources/img/gameview.png)
 
 
 
